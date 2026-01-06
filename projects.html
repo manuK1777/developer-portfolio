@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects - Web Dev Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Your Name</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home / About</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <section class="section">
+      <div class="container">
+        <header class="section-header">
+          <h1>Projects</h1>
+          <p>A selection of web development work. Replace these items with your real projects.</p>
+        </header>
+
+        <div class="filters" aria-label="Project filters">
+          <button class="filter-btn is-active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="frontend">Front-end</button>
+          <button class="filter-btn" data-filter="fullstack">Full-stack</button>
+          <button class="filter-btn" data-filter="ui">UI / UX</button>
+        </div>
+
+        <div class="grid three-cols cards-list" id="projects-list">
+          <article class="card" data-tags="frontend ui">
+            <h2>Marketing Landing Page</h2>
+            <p>Responsive landing page built with semantic HTML5, modern CSS, and vanilla JS animations.</p>
+            <p class="meta">Role: Front-end | Stack: HTML, CSS, JS</p>
+            <a href="#" class="card-link">View live</a>
+          </article>
+
+          <article class="card" data-tags="fullstack">
+            <h2>Portfolio CMS</h2>
+            <p>Custom portfolio management dashboard with project CRUD, image uploads, and tagging.</p>
+            <p class="meta">Role: Full-stack | Stack: Node, Express, MongoDB</p>
+            <a href="#" class="card-link">View repo</a>
+          </article>
+
+          <article class="card" data-tags="frontend ui">
+            <h2>Design System</h2>
+            <p>Component library and style guide for a product team, implemented in reusable UI patterns.</p>
+            <p class="meta">Role: Front-end | Stack: HTML, CSS, JS</p>
+            <a href="#" class="card-link">Case study</a>
+          </article>
+
+          <article class="card" data-tags="frontend">
+            <h2>Interactive Dashboard</h2>
+            <p>Data visualization dashboard with charts, filters, and accessible keyboard interactions.</p>
+            <p class="meta">Role: Front-end | Stack: JS, Charting library</p>
+            <a href="#" class="card-link">View live</a>
+          </article>
+
+          <article class="card" data-tags="fullstack ui">
+            <h2>Client Portal</h2>
+            <p>Secure portal for clients to review assets, timelines, and invoices.</p>
+            <p class="meta">Role: Full-stack | Stack: Your preferred stack</p>
+            <a href="#" class="card-link">View repo</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
