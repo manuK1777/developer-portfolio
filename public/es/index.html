@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home / About - Web Dev Portfolio</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/index.html" class="logo">
+        <img src="../assets/images/logo-red.png" alt="Logo" />
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" class="active">Home / About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Hi, I’m Manuel Krapovickas</h1>
+          <p class="lead">Frontend-focused Full-Stack Software Developer.</p>
+          <div class="hero-actions">
+            <a href="projects.html" class="btn primary">View Projects</a>
+            <a href="contact.html" class="btn secondary">Get in Touch</a>
+          </div>
+        </div>
+        <div class="hero-media" aria-hidden="true">
+          <div class="hero-avatar">
+            <img src="assets/images/Manuel_Krapovickas-ed.jpg" alt="Hero Avatar" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container">
+        <header class="section-header">
+          <h2>About Me</h2>
+          <p>I am a frontend-focused full-stack software developer specialized in building UI/UX-driven SaaS and internal platforms with modern web technologies.</p>
+        </header>
+
+        <div class="grid two-cols">
+          <div>
+            <p>
+             I am a highly disciplined, detail-oriented developer with a strong focus on collaboration and continuous improvement. I particularly enjoy working on complex interfaces, internal tools, and products where design and engineering decisions directly impact real users.
+            </p>
+          </div>
+          <div>
+            <h3>Core Skills</h3>
+           <ul class="pill-list">
+             <li>Modern Frontend Engineering (JavaScript, TypeScript, React, Next.js, Angular, Node.js)</li>
+             <li>UI Architecture & Design Systems</li>
+             <li>Performance-Oriented UI Development</li>
+             <li>Product-Centered UX Implementation</li>
+             <li>Cross-Team Collaboration</li>
+           </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section highlight">
+      <div class="container">
+        <header class="section-header">
+          <h2>Highlighted Projects</h2>
+          <p>A quick teaser of some key work. Add links to your most representative projects.</p>
+        </header>
+        <div class="grid three-cols cards-preview">
+          <article class="card">
+            <h3>Project One</h3>
+            <p>Short description of a flagship project. Mention stack and your role.</p>
+            <a href="projects.html" class="card-link">View all projects</a>
+          </article>
+          <article class="card">
+            <h3>Case Study</h3>
+            <p>Briefly highlight a deeper UX or technical case study.</p>
+            <a href="case-studies.html" class="card-link">Read case studies</a>
+          </article>
+          <article class="card">
+            <h3>Let’s Collaborate</h3>
+            <p>Invite visitors to reach out for work, freelancing, or collaboration.</p>
+            <a href="contact.html" class="card-link">Contact me</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Manuel Krapovickas. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/manuK1777"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/manuel-krapovickas/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
