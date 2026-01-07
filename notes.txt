@@ -19,3 +19,5 @@ At the bottom add a footer: to the left the same logo as in the navigation top n
 6/1/2025
 
 - Download CV
+
+- developer-portfolio
