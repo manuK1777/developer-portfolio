@@ -43,11 +43,31 @@
 .site-nav a:hover,
 .site-nav a:focus-visible {
   border-bottom-color: rgba(96, 165, 250, 0.7);
+  text-decoration: none;
 }
 
 .site-nav a.active {
   color: #ffffff;
   border-bottom-color: #60a5fa;
+}
+
+.lang-link {
+  /* color: #FB0B0B; */
+  color: #c5eb22;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.lang-link:hover,
+.lang-link:focus-visible {
+  color: #FB0B0B;
+}
+
+/* CURRENT language = red, based on <html lang="..."> */
+html[lang="en"] .lang-link[data-lang="en"],
+html[lang="es"] .lang-link[data-lang="es"] {
+  color: #FB0B0B;
 }
 
 .site-main {
@@ -79,12 +99,15 @@
 
 .footer-links a {
   font-size: 0.9rem;
-  color: #9ca3af;
+  /* color: #9ca3af; */
+  color: #c5eb22;
 }
 
 .footer-links a:hover,
 .footer-links a:focus-visible {
   color: #e5e7eb;
+  text-decoration: none;
+  color: #FB0B0B;
 }
 
 /* Hero layout */
