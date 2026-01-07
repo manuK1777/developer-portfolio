@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "title": "Home / About - Web Dev Portfolio"
+  },
+  "nav": {
+    "home": "Home / About",
+    "projects": "Projects",
+    "caseStudies": "Case Studies",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Hi, I’m Manuel Krapovickas",
+    "subtitle": "Frontend-focused Full-Stack Software Developer.",
+    "primaryCta": "View Projects",
+    "secondaryCta": "Get in Touch"
+  },
+  "about": {
+    "heading": "About Me",
+    "intro": "I am a frontend-focused full-stack software developer specialized in building UI/UX-driven SaaS and internal platforms with modern web technologies.",
+    "body": "I am a highly disciplined, detail-oriented developer with a strong focus on collaboration and continuous improvement. I particularly enjoy working on complex interfaces, internal tools, and products where design and engineering decisions directly impact real users.",
+    "coreSkillsHeading": "Core Skills",
+    "skills": [
+      "Modern Frontend Engineering (JavaScript, TypeScript, React, Next.js, Angular, Node.js)",
+      "UI Architecture & Design Systems",
+      "Performance-Oriented UI Development",
+      "Product-Centered UX Implementation",
+      "Cross-Team Collaboration"
+    ]
+  },
+  "highlight": {
+    "heading": "Highlighted Projects",
+    "intro": "A quick teaser of some key work. Add links to your most representative projects.",
+    "projectOneHeading": "Project One",
+    "projectOneBody": "Short description of a flagship project. Mention stack and your role.",
+    "projectOneCta": "View all projects",
+    "caseStudyHeading": "Case Study",
+    "caseStudyBody": "Briefly highlight a deeper UX or technical case study.",
+    "caseStudyCta": "Read case studies",
+    "collabHeading": "Let’s Collaborate",
+    "collabBody": "Invite visitors to reach out for work, freelancing, or collaboration.",
+    "collabCta": "Contact me"
+  },
+  "footer": {
+    "copyright": "© {year} Manuel Krapovickas. All rights reserved."
+  }
+}

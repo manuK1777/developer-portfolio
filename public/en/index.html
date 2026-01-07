@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home / About - Web Dev Portfolio</title>
+  <title data-i18n="meta.title">Home / About - Web Dev Portfolio</title>
   <link rel="stylesheet" href="/css/main.css" />
 </head>
 <body>
@@ -19,10 +19,15 @@
       </button>
       <nav class="site-nav" aria-label="Main">
         <ul>
-          <li><a href="index.html" class="active">Home / About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="case-studies.html">Case Studies</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" class="active" data-i18n="nav.home">Home / About</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="case-studies.html" data-i18n="nav.caseStudies">Case Studies</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          <li class="lang-toggle">
+            <button type="button" class="lang-link" data-lang="en">EN</button>
+            |
+            <button type="button" class="lang-link" data-lang="es">ES</button>
+          </li>
         </ul>
       </nav>
     </div>
@@ -32,11 +37,11 @@
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-text">
-          <h1>Hi, I’m Manuel Krapovickas</h1>
-          <p class="lead">Frontend-focused Full-Stack Software Developer.</p>
+          <h1 data-i18n="hero.title">Hi, I’m Manuel Krapovickas</h1>
+          <p class="lead" data-i18n="hero.subtitle">Frontend-focused Full-Stack Software Developer.</p>
           <div class="hero-actions">
-            <a href="projects.html" class="btn primary">View Projects</a>
-            <a href="contact.html" class="btn secondary">Get in Touch</a>
+            <a href="projects.html" class="btn primary" data-i18n="hero.primaryCta">View Projects</a>
+            <a href="contact.html" class="btn secondary" data-i18n="hero.secondaryCta">Get in Touch</a>
           </div>
         </div>
         <div class="hero-media" aria-hidden="true">
@@ -50,24 +55,24 @@
     <section class="section about" id="about">
       <div class="container">
         <header class="section-header">
-          <h2>About Me</h2>
-          <p>I am a frontend-focused full-stack software developer specialized in building UI/UX-driven SaaS and internal platforms with modern web technologies.</p>
+          <h2 data-i18n="about.heading">About Me</h2>
+          <p data-i18n="about.intro">I am a frontend-focused full-stack software developer specialized in building UI/UX-driven SaaS and internal platforms with modern web technologies.</p>
         </header>
 
         <div class="grid two-cols">
           <div>
-            <p>
+            <p data-i18n="about.body">
              I am a highly disciplined, detail-oriented developer with a strong focus on collaboration and continuous improvement. I particularly enjoy working on complex interfaces, internal tools, and products where design and engineering decisions directly impact real users.
             </p>
           </div>
           <div>
-            <h3>Core Skills</h3>
+            <h3 data-i18n="about.coreSkillsHeading">Core Skills</h3>
            <ul class="pill-list">
-             <li>Modern Frontend Engineering (JavaScript, TypeScript, React, Next.js, Angular, Node.js)</li>
-             <li>UI Architecture & Design Systems</li>
-             <li>Performance-Oriented UI Development</li>
-             <li>Product-Centered UX Implementation</li>
-             <li>Cross-Team Collaboration</li>
+             <li data-i18n="about.skills.0">Modern Frontend Engineering (JavaScript, TypeScript, React, Next.js, Angular, Node.js)</li>
+             <li data-i18n="about.skills.1">UI Architecture & Design Systems</li>
+             <li data-i18n="about.skills.2">Performance-Oriented UI Development</li>
+             <li data-i18n="about.skills.3">Product-Centered UX Implementation</li>
+             <li data-i18n="about.skills.4">Cross-Team Collaboration</li>
            </ul>
           </div>
         </div>
@@ -77,24 +82,24 @@
     <section class="section highlight">
       <div class="container">
         <header class="section-header">
-          <h2>Highlighted Projects</h2>
-          <p>A quick teaser of some key work. Add links to your most representative projects.</p>
+          <h2 data-i18n="highlight.heading">Highlighted Projects</h2>
+          <p data-i18n="highlight.intro">A quick teaser of some key work. Add links to your most representative projects.</p>
         </header>
         <div class="grid three-cols cards-preview">
           <article class="card">
-            <h3>Project One</h3>
-            <p>Short description of a flagship project. Mention stack and your role.</p>
-            <a href="projects.html" class="card-link">View all projects</a>
+            <h3 data-i18n="highlight.projectOneHeading">Project One</h3>
+            <p data-i18n="highlight.projectOneBody">Short description of a flagship project. Mention stack and your role.</p>
+            <a href="projects.html" class="card-link" data-i18n="highlight.projectOneCta">View all projects</a>
           </article>
           <article class="card">
-            <h3>Case Study</h3>
-            <p>Briefly highlight a deeper UX or technical case study.</p>
-            <a href="case-studies.html" class="card-link">Read case studies</a>
+            <h3 data-i18n="highlight.caseStudyHeading">Case Study</h3>
+            <p data-i18n="highlight.caseStudyBody">Briefly highlight a deeper UX or technical case study.</p>
+            <a href="case-studies.html" class="card-link" data-i18n="highlight.caseStudyCta">Read case studies</a>
           </article>
           <article class="card">
-            <h3>Let’s Collaborate</h3>
-            <p>Invite visitors to reach out for work, freelancing, or collaboration.</p>
-            <a href="contact.html" class="card-link">Contact me</a>
+            <h3 data-i18n="highlight.collabHeading">Let’s Collaborate</h3>
+            <p data-i18n="highlight.collabBody">Invite visitors to reach out for work, freelancing, or collaboration.</p>
+            <a href="contact.html" class="card-link" data-i18n="highlight.collabCta">Contact me</a>
           </article>
         </div>
       </div>
@@ -103,7 +108,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Manuel Krapovickas. All rights reserved.</p>
+      <p data-i18n="footer.copyright"></p>
       <ul class="footer-links">
         <li><a href="https://github.com/manuK1777"
             target="_blank"

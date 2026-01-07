@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "title": "Inicio / Sobre mí - Portfolio de Desarrollo Web"
+  },
+  "nav": {
+    "home": "Inicio / Sobre mí",
+    "projects": "Proyectos",
+    "caseStudies": "Casos de estudio",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Hola, soy Manuel Krapovickas",
+    "subtitle": "Desarrollador Full-Stack con foco en Frontend.",
+    "primaryCta": "Ver proyectos",
+    "secondaryCta": "Contactar"
+  },
+  "about": {
+    "heading": "Sobre mí",
+    "intro": "Soy un desarrollador full-stack con foco en frontend, especializado en la creación de plataformas SaaS y herramientas internas orientadas a UI/UX, utilizando tecnologías web modernas.",
+    "body": "Soy un desarrollador altamente disciplinado y orientado al detalle, con un fuerte enfoque en la colaboración y la mejora continua. Disfruto especialmente trabajar en interfaces complejas, herramientas internas y productos donde las decisiones de diseño e ingeniería tienen un impacto directo en los usuarios reales.",
+    "coreSkillsHeading": "Habilidades clave",
+    "skills": [
+      "Ingeniería Frontend moderna (JavaScript, TypeScript, React, Next.js, Angular, Node.js)",
+      "Arquitectura de UI y sistemas de diseño",
+      "Desarrollo de interfaces orientado al rendimiento",
+      "Implementación de UX centrada en producto",
+      "Colaboración entre equipos"
+    ]
+  },
+  "highlight": {
+    "heading": "Proyectos destacados",
+    "intro": "Una breve muestra de trabajos clave. Añade enlaces a tus proyectos más representativos.",
+    "projectOneHeading": "Proyecto principal",
+    "projectOneBody": "Descripción breve de un proyecto destacado. Menciona el stack y tu rol.",
+    "projectOneCta": "Ver todos los proyectos",
+    "caseStudyHeading": "Caso de estudio",
+    "caseStudyBody": "Destaca brevemente un caso de estudio técnico o de UX en mayor profundidad.",
+    "caseStudyCta": "Leer casos de estudio",
+    "collabHeading": "Colaboremos",
+    "collabBody": "Invita a los visitantes a contactarte para trabajo, freelance o colaboraciones.",
+    "collabCta": "Contáctame"
+  },
+  "footer": {
+    "copyright": "© {year} Manuel Krapovickas. Todos los derechos reservados."
+  }
+}
