@@ -1,0 +1,71 @@
+/* Base: reset, typography, general elements */
+* ,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* color: #0f172a; */
+  color: #7e8db0;
+  background-color: #0b1120;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+main {
+  display: block;
+}
+
+.container {
+  width: min(1120px, 100% - 2.5rem);
+  margin-inline: auto;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section.highlight {
+  background: radial-gradient(circle at top, #1d293b, #020617);
+}
+
+.section-header {
+  margin-bottom: 0.5rem;
+}
+
+.section-header h1,
+.section-header h2 {
+  margin: 0 0 0.5rem;
+}
+
+.section-header p {
+  margin: 0;
+  color: #cbd5f5;
+}
+
+.lead {
+  margin: 0 0 1.5rem;
+  color: #cbd5f5;
+}
