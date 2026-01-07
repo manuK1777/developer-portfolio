@@ -85,19 +85,10 @@
     });
   }
 
-  // Load translations based on preferred language or <html lang="..."> attribute
-  let htmlLang = (
+  // Load translations based on the <html lang="..."> attribute only
+  const htmlLang = (
     document.documentElement.getAttribute("lang") || "en"
   ).toLowerCase();
-
-  try {
-    const storedLang = window.localStorage.getItem("preferredLang");
-    if (storedLang === "en" || storedLang === "es") {
-      htmlLang = storedLang;
-    }
-  } catch (e) {
-    // Ignore storage errors
-  }
 
   loadTranslations(htmlLang);
 })();
