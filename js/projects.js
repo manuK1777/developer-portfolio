@@ -19,7 +19,7 @@
     });
   }
 
-const cards = document.querySelectorAll(".cards-list .card");
+const cards = document.querySelectorAll(".cards-list .card-projects");
 
 cards.forEach((card) => {
   card.addEventListener("click", (event) => {
