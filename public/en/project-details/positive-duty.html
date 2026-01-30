@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects - Web Dev Portfolio</title>
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">
+        <img src="/assets/images/logo-red.png" alt="Logo" />
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../index.html">Home / About</a></li>
+          <li><a href="../projects.html" class="active">Projects</a></li>
+          <li><a href="../case-studies.html">Case Studies</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li class="lang-toggle">
+            <button type="button" class="lang-link" data-lang="en">EN</button>
+            |
+            <button type="button" class="lang-link" data-lang="es">ES</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+   <main class="site-main">
+    <section class="section">
+      <div class="container">
+        <header class="section-header-projects">
+          <h1>Positive Duty</h1>
+        </header>
+        <div class="project-detail">
+          <p class="meta">
+            Web Developer - UI/UX Designer<br />
+            JPL Media - Positive Duty - Since July 2025
+          </p>
+
+          <p>
+            Frontend-focused full-stack role on Positive Duty v2, a web platform delivering compliance training
+            under Australia’s Respect at Work legislation. Contributed across the product lifecycle, with a strong
+            focus on UI architecture, UX flows, and role-based platforms including employee, admin, and superadmin
+            portals for multi-tenant deployments.
+          </p>
+
+          <h2>Frontend &amp; UI/UX</h2>
+          <ul>
+            <li>Next.js, React, TypeScript, JavaScript, Tailwind CSS.</li>
+            <li>Responsive design, accessibility, and component-based UI architecture.</li>
+            <li>Wireframing and prototyping with Figma.</li>
+          </ul>
+
+          <h2>Product &amp; Platform Features</h2>
+          <ul>
+            <li>
+              Video-based training modules, certifications, progress tracking, reporting dashboards, and resource
+              management interfaces.
+            </li>
+            <li>
+              Superadmin tools for multi-tenant configuration, content visibility, and client-level controls.
+            </li>
+          </ul>
+
+          <h2>Authentication &amp; Security</h2>
+          <ul>
+            <li>
+              Custom authentication flows using Keycloak (OIDC, email OTP), session handling, and role-based access
+              control.
+            </li>
+          </ul>
+
+          <h2>Collaboration &amp; Deployment</h2>
+          <ul>
+            <li>
+              Close collaboration with backend and DevOps teams to ensure smooth integration and deployment using
+              Kubernetes, Helm, and Rancher.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Manuel Krapovickas. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/manuK1777"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/manuel-krapovickas/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/projects.js"></script>
+</body>
+</html>
+
