@@ -63,6 +63,7 @@
   align-items: stretch;
 }
 
+.card-projects,
 .card {
   border-radius: 1rem;
   padding: 1.25rem 1.2rem 1.35rem;
@@ -70,31 +71,50 @@
   border: 1px solid rgba(148, 163, 184, 0.35);
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.65);
   color: #e5e7eb;
+  pointer-events: auto;
+  transition: background 0.16s ease, color 0.16s ease, transform 0.1s ease,
+    box-shadow 0.16s ease, border-color 0.16s ease;
 }
 
+.card-projects h2,
+.card-projects h3,
 .card h2,
 .card h3 {
   margin: 0 0 0.5rem;
 }
 
+.card-projects p,
 .card p {
   margin: 0 0 0.75rem;
   color: #cbd5f5;
 }
 
+.card-projects .meta,
 .card .meta {
   font-size: 0.85rem;
   color: #9ca3af;
 }
 
-.card-link {
+.card-projects .card-link,
+.card .card-link {
   font-size: 0.9rem;
   font-weight: 500;
   color: #60a5fa;
 }
 
-.card-link:hover,
-.card-link:focus-visible {
+.card-projects:hover,
+.card-projects:focus-within {
+  background: rgba(15, 23, 42, 1);            /* a bit brighter */
+  border-color: #60a5fa;                      /* blue border */
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.9);
+  transform: translateY(-3px);                /* lift the card */
+  cursor: pointer;
+}
+
+.card-projects .card-link:hover,
+.card-projects .card-link:focus-visible,
+.card .card-link:hover,
+.card .card-link:focus-visible {
   color: #93c5fd;
 }
 

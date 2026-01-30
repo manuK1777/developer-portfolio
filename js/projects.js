@@ -18,3 +18,17 @@
       });
     });
   }
+
+const cards = document.querySelectorAll(".cards-list .card");
+
+cards.forEach((card) => {
+  card.addEventListener("click", (event) => {
+    // If you clicked an actual link inside, let it work normally
+    if (event.target.closest("a")) return;
+
+    const link = card.querySelector(".card-link");
+    if (!link) return;
+
+    link.click();
+  });
+});
