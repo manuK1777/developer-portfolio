@@ -206,6 +206,18 @@ html[lang="es"] .lang-link[data-lang="es"] {
   margin-inline: auto;
 }
 
+/* Projects page layout */
+.section-header-projects h1{
+  margin-bottom: 1.75rem;
+  font-size: 2rem;
+  color: #e5e7eb;;
+}
+
+.project-detail h2{
+  font-size: 1.2rem;
+  color: #cbd5f5d4;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .header-inner {
