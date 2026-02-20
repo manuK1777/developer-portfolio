@@ -229,6 +229,10 @@ html[lang="es"] .lang-link[data-lang="es"] {
   margin-top: 1.25rem;  
 }
 
+.back-to-projects {
+  margin-top: 2rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .header-inner {
