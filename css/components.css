@@ -119,8 +119,12 @@
 }
 
 .project-slideshow {
-  margin: 2rem 0;
+  margin: 3rem 0;
   position: relative;
+}
+
+.slideshow-header {
+  margin-bottom: 2rem;
 }
 
 .project-slideshow .slides {

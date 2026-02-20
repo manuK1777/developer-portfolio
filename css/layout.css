@@ -214,8 +214,19 @@ html[lang="es"] .lang-link[data-lang="es"] {
 }
 
 .project-detail h2{
+  margin-top: 3rem;
   font-size: 1.2rem;
   color: #cbd5f5d4;
+}
+
+.project-detail h2:first-of-type {
+  margin-top: 0;
+}
+
+.project-detail h3 {
+  font-size: 1rem;      
+  color: #7e8db0;       
+  margin-top: 1.25rem;  
 }
 
 /* Responsive */
