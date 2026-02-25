@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects - Web Dev Portfolio</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="../index.html" class="logo">
+          <img src="/assets/images/logo-red.png" alt="Logo" />
+        </a>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="../index.html">Home / About</a></li>
+            <li><a href="../projects.html" class="active">Projects</a></li>
+            <li><a href="../case-studies.html">Case Studies</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li class="lang-toggle">
+              <button type="button" class="lang-link" data-lang="en">EN</button>
+              |
+              <button type="button" class="lang-link" data-lang="es">ES</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <section class="section">
+        <div class="container">
+          <header class="section-header-projects">
+            <h1>Conta</h1>
+          </header>
+
+          <div class="project-detail">
+            <p class="meta">
+              Role: Backend Developer &amp; Tooling Engineer<br />
+              Project: Independent CLI accounting tool for freelancers (Spain)
+            </p>
+
+            <p>
+              Built <strong>Conta</strong>, a Python-based command-line tool that helps
+              self-employed professionals keep track of invoices, deductible
+              expenses, social security payments, and quarterly tax obligations
+              in Spain. The application combines a typed domain model,
+              SQLite-backed persistence, and task-focused commands to provide a
+              fast workflow for everyday bookkeeping.
+            </p>
+
+            <p>
+              View the project:
+              <a class="project-link" href="https://github.com/manuK1777/Conta" target="_blank" rel="noopener noreferrer">Source code on GitHub</a>
+            </p>
+
+            <h1 class="subheader">Core Responsibilities &amp; Contributions</h1>
+
+            <h2>Product Architecture &amp; System Design</h2>
+            <ul>
+              <li>
+                Designed a modular accounting engine using Python 3.10,
+                <code>sqlmodel</code>, <code>pydantic</code>, and SQLite for
+                local, file-based storage
+              </li>
+              <li>
+                Modeled core bookkeeping entities
+                (<code>FacturaEmitida</code>, <code>GastoDeducible</code>,
+                <code>PagoAutonomo</code>, <code>PagoFraccionado130</code>) with
+                explicit enums for activity types (<code>programacion</code>,
+                <code>musica</code>)
+              </li>
+              <li>
+                Structured the application as a reusable package with a
+                dedicated <code>conta</code> entry point and environment-based
+                configuration
+              </li>
+            </ul>
+
+            <h2>CLI UX &amp; Workflow Automation</h2>
+            <ul>
+              <li>
+                Implemented a multi-command CLI using Typer, with structured
+                help text and argument parsing tailored to Spanish tax workflows
+              </li>
+              <li>
+                Added commands to register issued invoices
+                (<code>emite</code>), deductible expenses
+                (<code>gasto</code>), autonomous social security payments, and
+                fractioned IRPF payments
+              </li>
+              <li>
+                Provided rich terminal output using the Rich library, including
+                tabular listings for invoices and expenses
+              </li>
+              <li>
+                Included validation and helpful error messages for dates,
+                numeric fields, and quarter formats to reduce user mistakes
+              </li>
+            </ul>
+
+            <h2>Tax &amp; Reporting Logic for Spanish Freelancers</h2>
+            <ul>
+              <li>
+                Encapsulated quarterly VAT (IVA) calculations in a dedicated
+                service, computing devengado (owed) and deducible (deductible)
+                VAT per quarter
+              </li>
+              <li>
+                Implemented IRPF accumulated snapshot logic matching the
+                structure of Modelo 130 (base, withholdings, previous payments)
+                via the <code>irpf_snapshot_acumulado</code> service
+              </li>
+              <li>
+                Accounted for social security contributions, prior fractioned
+                payments, and activity filters to give a realistic view of
+                quarterly income tax obligations
+              </li>
+            </ul>
+
+            <h2>Data Model &amp; Persistence</h2>
+            <ul>
+              <li>
+                Used SQLModel to define typed tables with indexes on dates and
+                invoice numbers for efficient filtering and reporting
+              </li>
+              <li>
+                Ensured idempotent operations for critical entities (e.g.
+                preventing duplicate invoice numbers on creation)
+              </li>
+              <li>
+                Managed a lightweight SQLite database file, initialized via a
+                single <code>conta init</code> command
+              </li>
+            </ul>
+
+            <h2>Exports, Backups &amp; Extensibility</h2>
+            <ul>
+              <li>
+                Built CSV export of official VAT books (libros de IVA) using
+                pandas, generating separate files for issued and received
+                invoices per quarter
+              </li>
+              <li>
+                Added a <code>backup-db</code> command to create timestamped
+                copies of the SQLite database for safe archiving
+              </li>
+              <li>
+                Implemented PDF import hooks for invoices, laying the groundwork
+                for automating data entry from scanned documents
+              </li>
+              <li>
+                Structured the project with FastAPI and Uvicorn dependencies to
+                allow a future evolution from pure CLI to a small web dashboard
+                without changing the core domain layer
+              </li>
+            </ul>
+
+            <p class="back-to-projects">
+              <a class="project-link" href="../projects.html">&larr; Back to projects</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          &copy; <span id="year"></span> Manuel Krapovickas. All rights
+          reserved.
+        </p>
+        <ul class="footer-links">
+          <li>
+            <a
+              href="https://github.com/manuK1777"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/manuel-krapovickas/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/slideshow.js"></script>
+    <script src="/js/projects.js"></script>
+  </body>
+</html>
+
