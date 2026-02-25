@@ -63,6 +63,10 @@
   align-items: stretch;
 }
 
+.project-detail {
+  color: #7eb0aa;
+}
+
 .card-projects,
 .card {
   border-radius: 1rem;
@@ -116,6 +120,17 @@
 .card .card-link:hover,
 .card .card-link:focus-visible {
   color: #93c5fd;
+}
+
+/* Project detail external links */
+.project-link {
+  color: #62d9ff;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  color: #1dd889;
+  text-decoration: underline;
 }
 
 .project-slideshow {
