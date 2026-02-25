@@ -63,9 +63,22 @@
   align-items: stretch;
 }
 
-/* .project-detail {
-  color: #7eb0aa;
-} */
+/* Project detail layout & typography */
+.project-detail h2 {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  color: #cbd5f5d4;
+}
+
+.project-detail h2:first-of-type {
+  margin-top: 0;
+}
+
+.project-detail h3 {
+  font-size: 1rem;
+  color: #7e8db0;
+  margin-top: 1.25rem;
+}
 
 .card-projects,
 .card {
@@ -256,7 +269,7 @@
 /* Case studies */
 .case-study {
   margin-bottom: 3rem;
-  color: #e5e7eb;
+  /* color: #e5e7eb; */
 }
 
 .case-study h2 {
@@ -270,6 +283,7 @@
 }
 
 .case-study h3 {
+  color: #cbd5f5d4;
   margin-top: 1rem;
   margin-bottom: 0.25rem;
 }

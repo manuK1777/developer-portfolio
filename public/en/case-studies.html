@@ -42,7 +42,7 @@
 
         <article class="case-study">
           <header>
-            <h2>Automating Spanish Freelancer Accounting with a CLI-First Workflow (Conta)</h2>
+            <h2 class="subheader">Automating Spanish Freelancer Accounting with a CLI-First Workflow (Conta)</h2>
             <p class="meta">Role: Backend &amp; Tooling Engineer | Duration: Ongoing side project</p>
           </header>
           <section>
@@ -103,6 +103,82 @@
         </article>
 
         <hr class="section-divider" />
+
+        <article class="case-study">
+          <header>
+            <h2 class="subheader">Automating Annual Training Reviews for a Compliance Platform (Positive Duty)</h2>
+            <p class="meta">Role: Full-Stack &amp; Platform Engineer | Duration: Ongoing project</p>
+          </header>
+          <section>
+            <h3>Context</h3>
+            <p>
+              Positive Duty is a multi-tenant compliance training platform built to support Australia&apos;s
+              Respect at Work legislation. Clients need employees to re-complete key training modules on an
+              annual basis to stay compliant, but earlier workflows relied on manual exports and
+              spreadsheets, making it easy to miss overdue reviews as tenant and user counts grew.
+            </p>
+          </section>
+          <section>
+            <h3>Challenges</h3>
+            <ul>
+              <li>Deriving annual review due dates from historical completion data instead of static fields.</li>
+              <li>Designing an anniversary rule (11-month reminder, 12-month due date) that is correct and explainable.</li>
+              <li>Ensuring reminders are idempotent at scale so users do not receive duplicate emails.</li>
+              <li>Surfacing reminders across channels (email and in-portal UI) without overwhelming users.</li>
+              <li>Providing diagnostics and admin tools to seed data, test behavior, and debug specific users.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Solution</h3>
+            <p>
+              I implemented an annual review engine that scans training completions daily, computes who is due
+              for review, and delivers reminders via email and in-product notifications, with guardrails for
+              idempotency and operational visibility.
+            </p>
+            <ul>
+              <li>
+                Extended the Prisma schema with <code>ReminderDispatch</code> and <code>UINotification</code>
+                models to track which reminders have been sent and to persist in-app notifications for each
+                user and module.
+              </li>
+              <li>
+                Built a daily scanner in <code>anniversaryReminder.js</code> that aggregates the last
+                completion per user and module from <code>ViewerModuleCertification</code>, computes
+                11-month reminder and 12-month due dates, and skips users who are not yet due.
+              </li>
+              <li>
+                Implemented composite idempotency keys on
+                <code>(email, moduleId, completionAt, reminderType)</code> so repeated runs of the job do not
+                send duplicate reminders.
+              </li>
+              <li>
+                Integrated the scanner with existing <code>cronJobs.js</code> infrastructure using file-based
+                locks in a <code>.locks</code> directory to prevent overlapping executions and to log summary
+                metrics for each run.
+              </li>
+              <li>
+                Added anniversary-specific API endpoints (scan, diagnose, seed, mark-read) so admins can
+                trigger scans, backfill test data, and inspect why a particular user did or did not receive a
+                reminder without direct database access.
+              </li>
+              <li>
+                Surfaced the reminder count in the portal via an <code>AnniversaryContext</code> React
+                context and a <code>NotificationBanner</code> component that announces when modules are
+                pending review, updating on navigation, focus, and visibility changes.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Impact</h3>
+            <p>
+              The annual review engine replaced a manual, spreadsheet-based renewal process with a repeatable
+              and auditable workflow. Compliance teams now have higher confidence that employees due for
+              review receive timely reminders, while admins and stakeholders can diagnose behavior through
+              internal tools and persisted reminder records. This reduces operational overhead and helps
+              Positive Duty tenants maintain ongoing training compliance at scale.
+            </p>
+          </section>
+        </article>
 
       </div>
     </section>
