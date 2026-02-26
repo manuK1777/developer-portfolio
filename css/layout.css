@@ -137,8 +137,8 @@ html[lang="es"] .lang-link[data-lang="es"] {
 }
 
 .hero-avatar {
-  width: 140px;
-  height: 140px;
+  width: 160px;
+  height: 160px;
   border-radius: 999px;
   border: 1px solid rgba(148, 163, 184, 0.6);
   display: flex;
