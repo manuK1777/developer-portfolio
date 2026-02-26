@@ -212,13 +212,27 @@ html[lang="es"] .lang-link[data-lang="es"] {
   color: #e5e7eb;;
 }
 
+/* About section skills column */
 .skills-heading {
   margin-top: 5rem;
 }
 
-.back-to-projects {
-  margin-top: 2rem;
+/* Project detail navigation (previous / back / next) */
+.project-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
 }
+
+.project-nav p {
+  margin: 0;
+}
+
+.project-nav .to-next-project {
+  text-align: right;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
