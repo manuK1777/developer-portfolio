@@ -16,8 +16,8 @@
   },
   "about": {
     "heading": "About Me",
-    "intro": "I am a frontend-focused full-stack software developer specialized in building UI/UX-driven SaaS and internal platforms with modern web technologies.",
-    "body": "I am a highly disciplined, detail-oriented developer with a strong focus on collaboration and continuous improvement. I particularly enjoy working on complex interfaces, internal tools, and products where design and engineering decisions directly impact real users.",
+    "intro": "I am a frontend-focused full-stack software developer specialized in building UI/UX-driven SaaS products, internal platforms, and creative tools with modern web technologies.",
+    "body": "I bring a disciplined, detail-oriented approach with a strong focus on collaboration and continuous improvement. I particularly enjoy working on complex interfaces, internal tools, and products where design and engineering decisions directly impact real users.",
     "coreSkillsHeading": "Core Skills",
     "skills": [
       "Modern Frontend Engineering (JavaScript, TypeScript, React, Next.js, Angular, Node.js)",
@@ -29,15 +29,14 @@
   },
   "highlight": {
     "heading": "Highlighted Projects",
-    "intro": "A quick teaser of some key work. Add links to your most representative projects.",
-    "projectOneHeading": "Project One",
-    "projectOneBody": "Short description of a flagship project. Mention stack and your role.",
-    "projectOneCta": "View all projects",
+    "projectOneHeading": "JPL Media - Positive Duty",
+    "projectOneBody": "Web platform delivering compliance training under Australia’s Respect at Work legislation. Role: Frontend-focused full-stack. UI/UX Design",
+    "projectOneCta": "View project details",
     "caseStudyHeading": "Case Study",
-    "caseStudyBody": "Briefly highlight a deeper UX or technical case study.",
-    "caseStudyCta": "Read case studies",
+    "caseStudyBody": "Designing a Soundbank Pipeline for an Online Bandoneon Library.",
+    "caseStudyCta": "Read case study",
     "collabHeading": "Let’s Collaborate",
-    "collabBody": "Invite visitors to reach out for work, freelancing, or collaboration.",
+    "collabBody": "Interested in working together on a product, internal tool, or creative web project? I’m available for collaboration.",
     "collabCta": "Contact me"
   },
   "footer": {

@@ -91,4 +91,36 @@
   ).toLowerCase();
 
   loadTranslations(htmlLang);
+
+  // Make highlighted project cards on the home page behave as full card links
+  const highlightCards = document.querySelectorAll(
+    ".cards-preview .card-projects"
+  );
+
+  highlightCards.forEach((card) => {
+    // Click anywhere on the card (except direct links) to follow the main link
+    card.addEventListener("click", (event) => {
+      if (event.target.closest("a")) return;
+
+      const link = card.querySelector(".card-link");
+      if (!link) return;
+
+      link.click();
+    });
+
+    // Keyboard accessibility: Enter/Space activate the card
+    if (!card.hasAttribute("tabindex")) {
+      card.setAttribute("tabindex", "0");
+    }
+
+    card.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+
+      event.preventDefault();
+      const link = card.querySelector(".card-link");
+      if (link) {
+        link.click();
+      }
+    });
+  });
 })();

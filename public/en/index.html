@@ -1,126 +1,206 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="meta.title">Home / About - Web Dev Portfolio</title>
-  <link rel="stylesheet" href="/css/main.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <img src="/assets/images/logo-red.png" alt="Logo" />
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="site-nav" aria-label="Main">
-        <ul>
-          <li><a href="index.html" class="active" data-i18n="nav.home">Home / About</a></li>
-          <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
-          <li><a href="case-studies.html" data-i18n="nav.caseStudies">Case Studies</a></li>
-          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-          <li class="lang-toggle">
-            <button type="button" class="lang-link" data-lang="en">EN</button>
-            |
-            <button type="button" class="lang-link" data-lang="es">ES</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="meta.title">Home / About - Web Dev Portfolio</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img src="/assets/images/logo-red.png" alt="Logo" />
+        </a>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            <li>
+              <a href="index.html" class="active" data-i18n="nav.home"
+                >Home / About</a
+              >
+            </li>
+            <li>
+              <a href="projects.html" data-i18n="nav.projects">Projects</a>
+            </li>
+            <li>
+              <a href="case-studies.html" data-i18n="nav.caseStudies"
+                >Case Studies</a
+              >
+            </li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+            <li class="lang-toggle">
+              <button type="button" class="lang-link" data-lang="en">EN</button>
+              |
+              <button type="button" class="lang-link" data-lang="es">ES</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1 data-i18n="hero.title">Hi, I’m Manuel Krapovickas</h1>
+            <p class="lead" data-i18n="hero.subtitle">
+              Frontend-focused Full-Stack Software Developer.
+            </p>
+            <div class="hero-actions">
+              <a
+                href="projects.html"
+                class="btn primary"
+                data-i18n="hero.primaryCta"
+                >View Projects</a
+              >
+              <a
+                href="contact.html"
+                class="btn secondary"
+                data-i18n="hero.secondaryCta"
+                >Get in Touch</a
+              >
+            </div>
+          </div>
+          <div class="hero-media" aria-hidden="true">
+            <div class="hero-avatar">
+              <img
+                src="/assets/images/Manuel_Krapovickas-ed.jpg"
+                alt="Hero Avatar"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="container">
+          <header class="section-header">
+            <h2 data-i18n="about.heading">About Me</h2>
+            <p data-i18n="about.intro">
+              I am a frontend-focused full-stack software developer specialized
+              in building UI/UX-driven SaaS products, internal platforms, and
+              creative tools with modern web technologies.
+            </p>
+          </header>
+
+          <div class="grid two-cols">
+            <div>
+              <p data-i18n="about.body">
+                I bring a disciplined, detail-oriented approach with a strong
+                focus on collaboration and continuous improvement. I
+                particularly enjoy working on complex interfaces, internal
+                tools, and products where design and engineering decisions
+                directly impact real users.
+              </p>
+            </div>
+            <div>
+              <h3 data-i18n="about.coreSkillsHeading">Core Skills</h3>
+              <ul class="pill-list">
+                <li data-i18n="about.skills.0">
+                  Modern Frontend Engineering (JavaScript, TypeScript, React,
+                  Next.js, Angular, Node.js)
+                </li>
+                <li data-i18n="about.skills.1">
+                  UI Architecture & Design Systems
+                </li>
+                <li data-i18n="about.skills.2">
+                  Performance-Oriented UI Development
+                </li>
+                <li data-i18n="about.skills.3">
+                  Product-Centered UX Implementation
+                </li>
+                <li data-i18n="about.skills.4">Cross-Team Collaboration</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-highlight">
+        <div class="container">
+          <header class="section-header">
+            <h2 data-i18n="highlight.heading">Highlighted Projects</h2>
+          </header>
+          <div class="grid three-cols cards-preview">
+            <article class="card-projects">
+              <h3 data-i18n="highlight.projectOneHeading">
+                JPL Media - Positive Duty
+              </h3>
+              <p data-i18n="highlight.projectOneBody">
+                Web platform delivering compliance training under Australia's
+                Respect at Work legislation. Role: Frontend-focused full-stack.
+                UI/UX Design
+              </p>
+              <a
+                href="project-details/positive-duty.html"
+                class="card-link"
+                data-i18n="highlight.projectOneCta"
+                >View project details</a
+              >
+            </article>
+            <article class="card-projects">
+              <h3 data-i18n="highlight.caseStudyHeading">Case Study</h3>
+              <p data-i18n="highlight.caseStudyBody">
+                Designing a Soundbank Pipeline for an Online Bandoneon Library.
+              </p>
+              <a
+                href="case-studies.html#case-study-extended-bandoneon"
+                class="card-link"
+                data-i18n="highlight.caseStudyCta"
+                >Read case study</a
+              >
+            </article>
+            <article class="card-projects">
+              <h3 data-i18n="highlight.collabHeading">Let’s Collaborate</h3>
+              <p data-i18n="highlight.collabBody">
+                Interested in working together on a product, internal tool, or
+                creative web project? I’m available for collaboration.
+              </p>
+              <a
+                href="contact.html"
+                class="card-link"
+                data-i18n="highlight.collabCta"
+                >Contact me</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p data-i18n="footer.copyright"></p>
+        <ul class="footer-links">
+          <li>
+            <a
+              href="https://github.com/manuK1777"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/manuel-krapovickas/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
           </li>
         </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="site-main">
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1 data-i18n="hero.title">Hi, I’m Manuel Krapovickas</h1>
-          <p class="lead" data-i18n="hero.subtitle">Frontend-focused Full-Stack Software Developer.</p>
-          <div class="hero-actions">
-            <a href="projects.html" class="btn primary" data-i18n="hero.primaryCta">View Projects</a>
-            <a href="contact.html" class="btn secondary" data-i18n="hero.secondaryCta">Get in Touch</a>
-          </div>
-        </div>
-        <div class="hero-media" aria-hidden="true">
-          <div class="hero-avatar">
-            <img src="/assets/images/Manuel_Krapovickas-ed.jpg" alt="Hero Avatar" />
-          </div>
-        </div>
       </div>
-    </section>
+    </footer>
 
-    <section class="section about" id="about">
-      <div class="container">
-        <header class="section-header">
-          <h2 data-i18n="about.heading">About Me</h2>
-          <p data-i18n="about.intro">I am a frontend-focused full-stack software developer specialized in building UI/UX-driven SaaS and internal platforms with modern web technologies.</p>
-        </header>
-
-        <div class="grid two-cols">
-          <div>
-            <p data-i18n="about.body">
-             I am a highly disciplined, detail-oriented developer with a strong focus on collaboration and continuous improvement. I particularly enjoy working on complex interfaces, internal tools, and products where design and engineering decisions directly impact real users.
-            </p>
-          </div>
-          <div>
-            <h3 data-i18n="about.coreSkillsHeading">Core Skills</h3>
-           <ul class="pill-list">
-             <li data-i18n="about.skills.0">Modern Frontend Engineering (JavaScript, TypeScript, React, Next.js, Angular, Node.js)</li>
-             <li data-i18n="about.skills.1">UI Architecture & Design Systems</li>
-             <li data-i18n="about.skills.2">Performance-Oriented UI Development</li>
-             <li data-i18n="about.skills.3">Product-Centered UX Implementation</li>
-             <li data-i18n="about.skills.4">Cross-Team Collaboration</li>
-           </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-highlight">
-      <div class="container">
-        <header class="section-header">
-          <h2 data-i18n="highlight.heading">Highlighted Projects</h2>
-        </header>
-        <div class="grid three-cols cards-preview">
-          <article class="card">
-            <h3 data-i18n="highlight.projectOneHeading">Project One</h3>
-            <p data-i18n="highlight.projectOneBody">Short description of a flagship project. Mention stack and your role.</p>
-            <a href="projects.html" class="card-link" data-i18n="highlight.projectOneCta">View all projects</a>
-          </article>
-          <article class="card">
-            <h3 data-i18n="highlight.caseStudyHeading">Case Study</h3>
-            <p data-i18n="highlight.caseStudyBody">Briefly highlight a deeper UX or technical case study.</p>
-            <a href="case-studies.html" class="card-link" data-i18n="highlight.caseStudyCta">Read case studies</a>
-          </article>
-          <article class="card">
-            <h3 data-i18n="highlight.collabHeading">Let’s Collaborate</h3>
-            <p data-i18n="highlight.collabBody">Invite visitors to reach out for work, freelancing, or collaboration.</p>
-            <a href="contact.html" class="card-link" data-i18n="highlight.collabCta">Contact me</a>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p data-i18n="footer.copyright"></p>
-      <ul class="footer-links">
-        <li><a href="https://github.com/manuK1777"
-            target="_blank"
-            rel="noopener noreferrer"
-            >GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/manuel-krapovickas/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >LinkedIn</a></li>
-      </ul>
-    </div>
-  </footer>
-
-  <script src="/js/main.js"></script>
-</body>
+    <script src="/js/main.js"></script>
+  </body>
 </html>
