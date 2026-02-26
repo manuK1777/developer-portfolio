@@ -63,6 +63,14 @@
   align-items: stretch;
 }
 
+.section-highlight h2 {
+  margin-bottom: 1rem;
+}
+
+.cards-preview {
+  margin-bottom: 4rem;
+}
+
 /* Project detail layout & typography */
 .project-detail h2 {
   margin-top: 3rem;
