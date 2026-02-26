@@ -180,6 +180,84 @@
           </section>
         </article>
 
+        <hr class="section-divider" />
+
+        <article class="case-study">
+          <header>
+            <h2 class="subheader">Designing a Soundbank Pipeline for an Online Bandoneon Library (Extended Bandoneon)</h2>
+            <p class="meta">Role: Full-Stack Developer | Duration: Ongoing project</p>
+          </header>
+          <section>
+            <h3>Context</h3>
+            <p>
+              Extended Bandoneon is a research and performance project around the bandoneon instrument. A key
+              goal of the web app is to publish a curated online soundbank of high-quality bandoneon samples
+              that musicians, producers, and researchers can browse, preview, and download.
+            </p>
+          </section>
+          <section>
+            <h3>Challenges</h3>
+            <ul>
+              <li>Modeling sounds and soundpacks across MySQL and Cloudinary while keeping metadata in sync.</li>
+              <li>Supporting WAV uploads for quality while serving performant MP3 files to users.</li>
+              <li>Designing a tagging and filtering system that works across both sounds and soundpacks.</li>
+              <li>Building a responsive soundbank UI with waveform playback that scales with many sounds.</li>
+              <li>Making the soundbank discoverable with structured data without duplicating business logic.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Solution</h3>
+            <p>
+              I implemented an end-to-end soundbank pipeline that ingests audio into Cloudinary, normalizes
+              metadata in MySQL, and exposes a filterable, SEO-friendly sound library with waveform playback
+              and gated downloads.
+            </p>
+            <ul>
+              <li>
+                Modeled sounds, soundpacks, and hashtags in a relational schema, with a thin <code>db</code>
+                wrapper for queries and mutations so the Next.js API routes could stay focused on behavior
+                rather than connection management.
+              </li>
+              <li>
+                Built an admin-only upload endpoint that accepts WAV or MP3 files, uploads them to
+                Cloudinary, converts WAV to MP3 when needed, and stores duration, size, and canonical MP3
+                URLs in the <code>sounds</code> table.
+              </li>
+              <li>
+                Implemented soundpack management and tagging so editors can define soundpacks with shared
+                tags; individual sounds inherit those tags and can add their own, all persisted via a
+                normalized <code>hashtags</code>/<code>entity_hashtags</code> model.
+              </li>
+              <li>
+                Exposed a public <code>/api/sounds</code> endpoint that performs cursor-based pagination,
+                joins soundpacks and tags, filters to soundbank MP3 assets, and returns a frontend-friendly
+                shape for the React Query client on the soundbank page.
+              </li>
+              <li>
+                Built the soundbank frontend with infinite scroll, soundpack and tag filters, and a custom
+                <code>SoundPlayer</code> component using WaveSurfer.js to render waveforms and control
+                playback without relying on browser-native controls.
+              </li>
+              <li>
+                Added JSON-LD structured data for the soundbank using a <code>generateSoundbankStructuredData</code>
+                helper so search engines can index the collection as a set of <code>AudioObject</code>
+                resources.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Impact</h3>
+            <p>
+              The soundbank pipeline turned a static collection of audio files into a structured, explorable
+              library. Editors can upload new bandoneon sounds and organize them into soundpacks without
+              touching code, while visitors get fast waveform playback, meaningful filters, and gated
+              downloads. This makes the Extended Bandoneon project more useful to performers, producers, and
+              researchers and provides a solid foundation for future tooling such as datasets or analysis
+              tools.
+            </p>
+          </section>
+        </article>
+
       </div>
     </section>
   </main>
