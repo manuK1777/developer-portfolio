@@ -113,8 +113,8 @@ html[lang="es"] .lang-link[data-lang="es"] {
 /* Hero layout */
 .hero {
   padding: 4.5rem 0 4rem;
-  background: radial-gradient(circle at top left, #1d283a, transparent 55%),
-    radial-gradient(circle at top right, #0f172a, transparent 55%);
+  background: radial-gradient(circle at top left, #1d283a, transparent 70%),
+    radial-gradient(circle at top right, #1e2a47, transparent 70%);
   color: #e5e7eb;
 }
 

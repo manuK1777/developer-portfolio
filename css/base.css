@@ -44,10 +44,11 @@ main {
 }
 
 .section {
-  padding: 4rem 0;
+  padding: 3rem 0 2rem;
 }
 
 .section.highlight {
+  margin-top: 4rem;
   background: radial-gradient(circle at top, #1d293b, #020617);
 }
 
