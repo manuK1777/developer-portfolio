@@ -1,127 +1,216 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="meta.title">Inicio / Sobre mí - Portfolio de Desarrollo Web</title>
-  <link rel="stylesheet" href="/css/main.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <img src="/assets/images/logo-red.png" alt="Logo" />
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="site-nav" aria-label="Main">
-        <ul>
-          <li><a href="index.html" class="active" data-i18n="nav.home">Inicio / Sobre mí</a></li>
-          <li><a href="projects.html" data-i18n="nav.projects">Proyectos</a></li>
-          <li><a href="case-studies.html" data-i18n="nav.caseStudies">Casos de estudio</a></li>
-          <li><a href="contact.html" data-i18n="nav.contact">Contacto</a></li>
-          <li class="lang-toggle">
-            <button type="button" class="lang-link" data-lang="en">EN</button>
-            |
-            <button type="button" class="lang-link" data-lang="es">ES</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="meta.title">
+      Inicio / Sobre mí - Portfolio de Desarrollo Web
+    </title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img src="/assets/images/logo-red.png" alt="Logo" />
+        </a>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            <li>
+              <a href="index.html" class="active" data-i18n="nav.home"
+                >Inicio / Sobre mí</a
+              >
+            </li>
+            <li>
+              <a href="projects.html" data-i18n="nav.projects">Proyectos</a>
+            </li>
+            <li>
+              <a href="case-studies.html" data-i18n="nav.caseStudies"
+                >Casos de estudio</a
+              >
+            </li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contacto</a></li>
+            <li class="lang-toggle">
+              <button type="button" class="lang-link" data-lang="en">EN</button>
+              |
+              <button type="button" class="lang-link" data-lang="es">ES</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1 data-i18n="hero.title">Hola, soy Manuel Krapovickas</h1>
+            <p class="lead" data-i18n="hero.subtitle">
+              Desarrollador Full-Stack con foco en Frontend.
+            </p>
+            <div class="hero-actions">
+              <a
+                href="projects.html"
+                class="btn primary"
+                data-i18n="hero.primaryCta"
+                >Ver proyectos</a
+              >
+              <a
+                href="contact.html"
+                class="btn secondary"
+                data-i18n="hero.secondaryCta"
+                >Contactar</a
+              >
+            </div>
+          </div>
+          <div class="hero-media" aria-hidden="true">
+            <div class="hero-avatar">
+              <img
+                src="/assets/images/Manuel_Krapovickas-ed.jpg"
+                alt="Hero Avatar"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="container">
+          <header class="section-header">
+            <h2 data-i18n="about.heading">Sobre mí</h2>
+          </header>
+
+          <div class="grid two-cols">
+            <div>
+              <p data-i18n="about.intro">
+                Soy un desarrollador de software full‑stack con foco en
+                frontend, especializado en la creación de productos SaaS
+                orientados a UI/UX, plataformas internas y herramientas
+                creativas utilizando tecnologías web modernas.
+              </p>
+              <p data-i18n="about.body">
+                Aplico un enfoque disciplinado y orientado al detalle, con un
+                fuerte énfasis en la colaboración y la mejora continua. Disfruto
+                especialmente trabajar en interfaces complejas, herramientas
+                internas y productos donde las decisiones de diseño e ingeniería
+                tienen un impacto directo en los usuarios reales.
+              </p>
+            </div>
+            <div class="skills-heading">
+              <h3 data-i18n="about.coreSkillsHeading">Habilidades clave</h3>
+              <ul class="pill-list">
+                <li data-i18n="about.skills.0">
+                  Ingeniería Frontend moderna (JavaScript, TypeScript, React,
+                  Next.js, Angular, Node.js)
+                </li>
+                <li data-i18n="about.skills.1">
+                  Arquitectura de UI y sistemas de diseño
+                </li>
+                <li data-i18n="about.skills.2">
+                  Desarrollo de interfaces orientado al rendimiento
+                </li>
+                <li data-i18n="about.skills.3">
+                  Implementación de UX centrada en producto
+                </li>
+                <li data-i18n="about.skills.4">
+                  Colaboración entre equipos de Producto, Diseño e Ingeniería
+                </li>
+                <li data-i18n="about.skills.5">
+                  Interfaces centradas en medios y audio (reproductores de forma
+                  de onda, bibliotecas de sonidos, maquetación rica)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section highlight">
+        <div class="container">
+          <header class="section-header">
+            <h2 data-i18n="highlight.heading">Proyectos destacados</h2>
+          </header>
+          <div class="grid three-cols cards-preview">
+            <article class="card-projects">
+              <h3 data-i18n="highlight.projectOneHeading">
+                JPL Media - Positive Duty
+              </h3>
+              <p data-i18n="highlight.projectOneBody">
+                Plataforma web que ofrece formación en cumplimiento normativo
+                bajo la ley australiana Respect at Work. Rol: desarrollador
+                full-stack con foco en frontend. Diseño UI/UX.
+              </p>
+              <a
+                href="project-details/positive-duty.html"
+                class="card-link"
+                data-i18n="highlight.projectOneCta"
+                >Ver detalles del proyecto</a
+              >
+            </article>
+            <article class="card-projects">
+              <h3 data-i18n="highlight.caseStudyHeading">Caso de estudio</h3>
+              <p data-i18n="highlight.caseStudyBody">
+                Diseño de flujo de creación de biblioteca de sonidos para una
+                librería online de bandoneón.
+              </p>
+              <a
+                href="case-studies.html#case-study-extended-bandoneon"
+                class="card-link"
+                data-i18n="highlight.caseStudyCta"
+                >Leer caso de estudio</a
+              >
+            </article>
+            <article class="card-projects">
+              <h3 data-i18n="highlight.collabHeading">Colaboremos</h3>
+              <p data-i18n="highlight.collabBody">
+                ¿Te interesa trabajar juntos en un producto, herramienta interna
+                o proyecto web creativo? Estoy disponible para colaborar.
+              </p>
+              <a
+                href="contact.html"
+                class="card-link"
+                data-i18n="highlight.collabCta"
+                >Contáctame</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p data-i18n="footer.copyright"></p>
+        <ul class="footer-links">
+          <li>
+            <a
+              href="https://github.com/manuK1777"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/manuel-krapovickas/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
           </li>
         </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="site-main">
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1 data-i18n="hero.title">Hola, soy Manuel Krapovickas</h1>
-          <p class="lead" data-i18n="hero.subtitle">Desarrollador Full-Stack con foco en Frontend.</p>
-          <div class="hero-actions">
-            <a href="projects.html" class="btn primary" data-i18n="hero.primaryCta">Ver proyectos</a>
-            <a href="contact.html" class="btn secondary" data-i18n="hero.secondaryCta">Contactar</a>
-          </div>
-        </div>
-        <div class="hero-media" aria-hidden="true">
-          <div class="hero-avatar">
-            <img src="/assets/images/Manuel_Krapovickas-ed.jpg" alt="Hero Avatar" />
-          </div>
-        </div>
       </div>
-    </section>
+    </footer>
 
-    <section class="section about" id="about">
-      <div class="container">
-        <header class="section-header">
-          <h2 data-i18n="about.heading">Sobre mí</h2>
-          <p data-i18n="about.intro">Soy un desarrollador full-stack con foco en frontend, especializado en la creación de plataformas SaaS y herramientas internas orientadas a UI/UX, utilizando tecnologías web modernas.</p>
-        </header>
-
-        <div class="grid two-cols">
-          <div>
-            <p data-i18n="about.body">
-             Soy un desarrollador altamente disciplinado y orientado al detalle, con un fuerte enfoque en la colaboración y la mejora continua. Disfruto especialmente trabajar en interfaces complejas, herramientas internas y productos donde las decisiones de diseño e ingeniería tienen un impacto directo en los usuarios reales.
-            </p>
-          </div>
-          <div>
-            <h3 data-i18n="about.coreSkillsHeading">Habilidades clave</h3>
-           <ul class="pill-list">
-             <li data-i18n="about.skills.0">Ingeniería Frontend moderna (JavaScript, TypeScript, React, Next.js, Angular, Node.js)</li>
-             <li data-i18n="about.skills.1">Arquitectura de UI y sistemas de diseño</li>
-             <li data-i18n="about.skills.2">Desarrollo de interfaces orientado al rendimiento</li>
-             <li data-i18n="about.skills.3">Implementación de UX centrada en producto</li>
-             <li data-i18n="about.skills.4">Colaboración entre equipos</li>
-           </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section highlight">
-      <div class="container">
-        <header class="section-header">
-          <h2 data-i18n="highlight.heading">Proyectos destacados</h2>
-          <p data-i18n="highlight.intro">Una breve muestra de trabajos clave. Añade enlaces a tus proyectos más representativos.</p>
-        </header>
-        <div class="grid three-cols cards-preview">
-          <article class="card">
-            <h3 data-i18n="highlight.projectOneHeading">Proyecto principal</h3>
-            <p data-i18n="highlight.projectOneBody">Descripción breve de un proyecto destacado. Menciona el stack y tu rol.</p>
-            <a href="projects.html" class="card-link" data-i18n="highlight.projectOneCta">Ver todos los proyectos</a>
-          </article>
-          <article class="card">
-            <h3 data-i18n="highlight.caseStudyHeading">Caso de estudio</h3>
-            <p data-i18n="highlight.caseStudyBody">Destaca brevemente un caso de estudio técnico o de UX en mayor profundidad.</p>
-            <a href="case-studies.html" class="card-link" data-i18n="highlight.caseStudyCta">Leer casos de estudio</a>
-          </article>
-          <article class="card">
-            <h3 data-i18n="highlight.collabHeading">Colaboremos</h3>
-            <p data-i18n="highlight.collabBody">Invita a los visitantes a contactarte para trabajo, freelance o colaboraciones.</p>
-            <a href="contact.html" class="card-link" data-i18n="highlight.collabCta">Contáctame</a>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p data-i18n="footer.copyright"></p>
-      <ul class="footer-links">
-        <li><a href="https://github.com/manuK1777"
-            target="_blank"
-            rel="noopener noreferrer"
-            >GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/manuel-krapovickas/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >LinkedIn</a></li>
-      </ul>
-    </div>
-  </footer>
-
-  <script src="/js/main.js"></script>
-</body>
+    <script src="/js/main.js"></script>
+  </body>
 </html>
