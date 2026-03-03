@@ -40,77 +40,10 @@
           <h1>Case Studies</h1>
         </header>
 
-        <article class="case-study" id="case-study-conta">
-          <header>
-            <h2 class="subheader">Automating Spanish Freelancer Accounting with a CLI-First Workflow (Conta)</h2>
-            <p class="meta">Role: Backend &amp; Tooling Engineer | Duration: Ongoing side project</p>
-          </header>
-          <section>
-            <h3>Context</h3>
-            <p>
-              As a self-employed professional in Spain, I needed to manage invoices, deductible expenses,
-              social security contributions, and quarterly tax obligations (IVA and IRPF). My existing
-              workflow involved spreadsheets and manual calculations before filing official forms like
-              Modelo 130, which was error-prone and time-consuming.
-            </p>
-          </section>
-          <section>
-            <h3>Challenges</h3>
-            <ul>
-              <li>Centralizing invoices, expenses, and tax-related payments in a consistent data model.</li>
-              <li>Encoding Spanish tax rules (quarters, IVA devengado/deducible, IRPF base and retentions) in code.</li>
-              <li>Designing a CLI workflow that was fast to use but still guided and safe for everyday bookkeeping.</li>
-              <li>Generating exports and backups that could be shared with an accountant or used for audits.</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Solution</h3>
-            <p>
-              I designed and implemented <strong>Conta</strong>, a Python-based command-line application that
-              models the accounting domain explicitly and automates the most repetitive parts of my
-              freelancer workflow.
-            </p>
-            <ul>
-              <li>
-                Built a typed domain model with SQLModel and SQLite for entities like issued invoices,
-                deductible expenses, social security payments, and fractioned IRPF payments.
-              </li>
-              <li>
-                Implemented a Typer-powered CLI with focused commands for recording invoices (<code>emite</code>),
-                expenses (<code>gasto</code>), and listing data by year or quarter, using Rich tables for
-                readable terminal output.
-              </li>
-              <li>
-                Encapsulated IVA and IRPF logic in dedicated services that compute quarterly snapshots based
-                on real data, mirroring the structure of official Spanish tax forms.
-              </li>
-              <li>
-                Added CSV exports for VAT books and a <code>backup-db</code> command so the SQLite database
-                can be safely archived or handed off to an accountant.
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h3>Impact</h3>
-            <p>
-              With Conta, I replaced a fragile spreadsheet-based workflow with a repeatable CLI routine.
-              Recording invoices and expenses is now a matter of running a few commands, and quarterly IVA
-              and IRPF snapshots can be generated on demand. This reduces manual calculation errors,
-              shortens the time I spend preparing tax forms, and gives me a clearer view of my financial
-              position throughout the year.
-            </p>
-            <p>
-              <a class="project-link" href="project-details/conta.html">Go to project page</a>
-            </p>
-          </section>
-        </article>
-
-        <hr class="section-divider" />
-
         <article class="case-study" id="case-study-positive-duty">
           <header>
             <h2 class="subheader">Automating Annual Training Reviews for a Compliance Platform (Positive Duty)</h2>
-            <p class="meta">Role: Full-Stack &amp; Platform Engineer | Duration: Ongoing project</p>
+            <p class="meta">Role: Full-Stack &amp; Platform Engineer | Duration: platform version 2 built</p>
           </header>
           <section>
             <h3>Context</h3>
@@ -263,6 +196,73 @@
             </p>
             <p>
               <a class="project-link" href="project-details/extended-bandoneon.html">Go to project page</a>
+            </p>
+          </section>
+        </article>
+
+        <hr class="section-divider" />
+
+         <article class="case-study" id="case-study-conta">
+          <header>
+            <h2 class="subheader">Automating Spanish Freelancer Accounting with a CLI-First Workflow (Conta)</h2>
+            <p class="meta">Role: Backend &amp; Tooling Engineer | Duration: Ongoing personal project</p>
+          </header>
+          <section>
+            <h3>Context</h3>
+            <p>
+              As a self-employed professional in Spain, I needed to manage invoices, deductible expenses,
+              social security contributions, and quarterly and annual tax obligations (IVA and IRPF). My existing
+              workflow involved spreadsheets and manual calculations before filing official forms like
+              Modelos 130, 303 and 390, which was error-prone and time-consuming.
+            </p>
+          </section>
+          <section>
+            <h3>Challenges</h3>
+            <ul>
+              <li>Centralizing invoices, expenses, and tax-related payments in a consistent data model.</li>
+              <li>Encoding Spanish tax rules (quarters, IVA devengado/deducible, IRPF base and retentions) in code.</li>
+              <li>Designing a CLI workflow that was fast to use but still guided and safe for everyday bookkeeping.</li>
+              <li>Generating exports and backups that could be shared with an accountant or used for audits.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Solution</h3>
+            <p>
+              I designed and implemented <strong>Conta</strong>, a Python-based command-line application that
+              models the accounting domain explicitly and automates the most repetitive parts of my
+              freelancer workflow.
+            </p>
+            <ul>
+              <li>
+                Built a typed domain model with SQLModel and SQLite for entities like issued invoices,
+                deductible expenses, social security payments, and fractioned IRPF payments.
+              </li>
+              <li>
+                Implemented a Typer-powered CLI with focused commands for recording invoices (<code>emite</code>),
+                expenses (<code>gasto</code>), and listing data by year or quarter, using Rich tables for
+                readable terminal output.
+              </li>
+              <li>
+                Encapsulated IVA and IRPF logic in dedicated services that compute quarterly snapshots based
+                on real data, mirroring the structure of official Spanish tax forms.
+              </li>
+              <li>
+                Added CSV exports for VAT books and a <code>backup-db</code> command so the SQLite database
+                can be safely archived or handed off to an accountant.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Impact</h3>
+            <p>
+              With Conta, I replaced a fragile spreadsheet-based workflow with a repeatable CLI routine.
+              Recording invoices and expenses is now a matter of running a few commands, and quarterly IVA
+              and IRPF snapshots can be generated on demand. This reduces manual calculation errors,
+              shortens the time I spend preparing tax forms, and gives me a clearer view of my financial
+              position throughout the year.
+            </p>
+            <p>
+              <a class="project-link" href="project-details/conta.html">Go to project page</a>
             </p>
           </section>
         </article>

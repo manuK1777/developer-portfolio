@@ -40,81 +40,17 @@
           <h1>Casos de estudio</h1>
         </header>
 
-        <article class="case-study" id="case-study-conta">
-          <header>
-            <h2 class="subheader">Automatizando la contabilidad de autónomos en España con un flujo CLI-first (Conta)</h2>
-            <p class="meta">Rol: ingeniero backend y de herramientas | Duración: proyecto paralelo en curso</p>
-          </header>
-          <section>
-            <h3>Contexto</h3>
-            <p>
-              Como profesional autónomo en España, necesitaba gestionar facturas emitidas, gastos deducibles,
-              cotizaciones a la seguridad social y obligaciones fiscales trimestrales (IVA e IRPF). Mi flujo de
-              trabajo anterior se basaba en hojas de cálculo y cálculos manuales antes de presentar los modelos
-              oficiales como el Modelo 130, lo que era propenso a errores y consumía mucho tiempo.
-            </p>
-          </section>
-          <section>
-            <h3>Desafíos</h3>
-            <ul>
-              <li>Centralizar facturas, gastos y pagos relacionados con impuestos en un modelo de datos coherente.</li>
-              <li>Codificar en software las reglas fiscales españolas (trimestres, IVA devengado/deducible, base y retenciones de IRPF).</li>
-              <li>Diseñar un flujo de trabajo en CLI que fuera rápido de usar pero a la vez guiado y seguro para la contabilidad diaria.</li>
-              <li>Generar exportaciones y copias de seguridad que pudieran compartirse con una gestoría o utilizarse en auditorías.</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Solución</h3>
-            <p>
-              Diseñé e implementé <strong>Conta</strong>, una aplicación de línea de comandos en Python que modela de
-              forma explícita el dominio contable y automatiza las partes más repetitivas de mi flujo de trabajo como autónomo.
-            </p>
-            <ul>
-              <li>
-                Construcción de un modelo de dominio tipado con SQLModel y SQLite para entidades como facturas emitidas,
-                gastos deducibles, pagos de seguridad social y pagos fraccionados de IRPF.
-              </li>
-              <li>
-                Implementación de una CLI basada en Typer con comandos enfocados para registrar facturas (<code>emite</code>),
-                gastos (<code>gasto</code>) y listar datos por año o trimestre, utilizando tablas Rich para una salida legible en terminal.
-              </li>
-              <li>
-                Encapsulado de la lógica de IVA e IRPF en servicios dedicados que calculan snapshots trimestrales basados en datos reales,
-                reflejando la estructura de los modelos fiscales oficiales españoles.
-              </li>
-              <li>
-                Añadidos exportes CSV para los libros de IVA y un comando <code>backup-db</code> para poder archivar con seguridad
-                la base de datos SQLite o entregarla a una gestoría.
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h3>Impacto</h3>
-            <p>
-              Con Conta, sustituí un flujo basado en hojas de cálculo frágiles por una rutina de CLI repetible.
-              Registrar facturas y gastos ahora se reduce a ejecutar unos pocos comandos, y los snapshots trimestrales de IVA e IRPF
-              pueden generarse bajo demanda. Esto reduce errores de cálculo manual, acorta el tiempo que dedico a preparar modelos
-              fiscales y me ofrece una visión más clara de mi situación financiera a lo largo del año.
-            </p>
-            <p>
-              <a class="project-link" href="project-details/conta.html">Ir a página del proyecto</a>
-            </p>
-          </section>
-        </article>
-
-        <hr class="section-divider" />
-
         <article class="case-study" id="case-study-positive-duty">
           <header>
-            <h2 class="subheader">Automatizando revisiones anuales de formación en una plataforma de cumplimiento (Positive Duty)</h2>
-            <p class="meta">Rol: desarrollador full-stack y de plataforma | Duración: proyecto en curso</p>
+            <h2 class="subheader">Automatizando revisiones anuales de formación en una plataforma de cumplimiento normativo (Positive Duty)</h2>
+            <p class="meta">Rol: desarrollador full-stack y de plataforma | Duración: versión 2 de la plataforma finalizada</p>
           </header>
           <section>
             <h3>Contexto</h3>
             <p>
               Positive Duty es una plataforma de formación en cumplimiento multi-tenant creada para dar soporte a la legislación
               australiana Respect at Work. Los clientes necesitan que las personas empleadas repitan periódicamente módulos de
-              formación clave para mantenerse al día, pero los flujos anteriores se basaban en exportes manuales y hojas de cálculo,
+              formación clave para mantenerse al día, pero los flujos anteriores se basaban en exportaciones manuales y hojas de cálculo,
               lo que facilitaba que se pasaran por alto revisiones vencidas a medida que crecía el número de tenants y usuarios.
             </p>
           </section>
@@ -132,7 +68,7 @@
             <h3>Solución</h3>
             <p>
               Implementé un motor de revisiones anuales que escanea a diario las finalizaciones de módulos, calcula quién debe revisar
-              formación y entrega recordatorios por correo y notificaciones in-product, con salvaguardas de idempotencia y visibilidad
+              formación y envía recordatorios por correo y notificaciones en la plataforma, con salvaguardas de idempotencia y visibilidad
               operativa.
             </p>
             <ul>
@@ -257,6 +193,70 @@
             </p>
             <p>
               <a class="project-link" href="project-details/extended-bandoneon.html">Ir a página del proyecto</a>
+            </p>
+          </section>
+        </article>
+
+        <hr class="section-divider" />
+
+          <article class="case-study" id="case-study-conta">
+          <header>
+            <h2 class="subheader">Automatizando la contabilidad de autónomos en España con un flujo CLI-first (Conta)</h2>
+            <p class="meta">Rol: ingeniero backend y de herramientas | Duración: proyecto personal en curso</p>
+          </header>
+          <section>
+            <h3>Contexto</h3>
+            <p>
+              Como profesional autónomo en España, necesitaba gestionar facturas emitidas, gastos deducibles,
+              cotizaciones a la seguridad social y obligaciones fiscales trimestrales y anuales (IVA e IRPF). Mi flujo de
+              trabajo anterior se basaba en hojas de cálculo y cálculos manuales antes de presentar los modelos
+              oficiales 130, 303 y 390 lo que era propenso a errores y consumía mucho tiempo.
+            </p>
+          </section>
+          <section>
+            <h3>Desafíos</h3>
+            <ul>
+              <li>Centralizar facturas, gastos y pagos relacionados con impuestos en un modelo de datos coherente.</li>
+              <li>Codificar en software las reglas fiscales españolas (trimestres, IVA devengado/deducible, base y retenciones de IRPF).</li>
+              <li>Diseñar un flujo de trabajo en CLI que fuera rápido de usar pero a la vez guiado y seguro para la contabilidad diaria.</li>
+              <li>Generar exportaciones y copias de seguridad que pudieran compartirse con una gestoría o utilizarse en auditorías.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Solución</h3>
+            <p>
+              Diseñé e implementé <strong>Conta</strong>, una aplicación de línea de comandos en Python que modela de
+              forma explícita el dominio contable y automatiza las partes más repetitivas de mi flujo de trabajo como autónomo.
+            </p>
+            <ul>
+              <li>
+                Construcción de un modelo de dominio tipado con SQLModel y SQLite para entidades como facturas emitidas,
+                gastos deducibles, pagos de seguridad social y pagos fraccionados de IRPF.
+              </li>
+              <li>
+                Implementación de una CLI basada en Typer con comandos enfocados para registrar facturas (<code>emite</code>),
+                gastos (<code>gasto</code>) y listar datos por año o trimestre, utilizando tablas Rich para una salida legible en terminal.
+              </li>
+              <li>
+                Encapsulado de la lógica de IVA e IRPF en servicios dedicados que calculan snapshots trimestrales basados en datos reales,
+                reflejando la estructura de los modelos fiscales oficiales españoles.
+              </li>
+              <li>
+                Añadidos exportes CSV para los libros de IVA y un comando <code>backup-db</code> para poder archivar con seguridad
+                la base de datos SQLite o entregarla a una gestoría.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Impacto</h3>
+            <p>
+              Con Conta, sustituí un flujo basado en hojas de cálculo frágiles por una rutina de CLI repetible.
+              Registrar facturas y gastos ahora se reduce a ejecutar unos pocos comandos, y los snapshots trimestrales de IVA e IRPF
+              pueden generarse bajo demanda. Esto reduce errores de cálculo manual, acorta el tiempo que dedico a preparar modelos
+              fiscales y me ofrece una visión más clara de mi situación financiera a lo largo del año.
+            </p>
+            <p>
+              <a class="project-link" href="project-details/conta.html">Ir a página del proyecto</a>
             </p>
           </section>
         </article>
