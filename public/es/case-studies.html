@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Case Studies - Web Dev Portfolio</title>
+  <title>Casos de estudio - Portfolio de Desarrollo Web</title>
   <link rel="stylesheet" href="/css/main.css" />
 </head>
 <body>
@@ -19,10 +19,10 @@
       </button>
       <nav class="site-nav" aria-label="Main">
         <ul>
-          <li><a href="index.html">Home / About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="case-studies.html" class="active">Case Studies</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Inicio / Sobre mí</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Proyectos</a></li>
+          <li><a href="case-studies.html" class="active" data-i18n="nav.caseStudies">Casos de estudio</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contacto</a></li>
           <li class="lang-toggle">
             <button type="button" class="lang-link" data-lang="en">EN</button>
             |
@@ -37,84 +37,228 @@
     <section class="section">
       <div class="container">
         <header class="section-header">
-          <h1>Case Studies</h1>
-          <p>Deeper dives into selected projects. Use these to show your thinking and process.</p>
+          <h1>Casos de estudio</h1>
         </header>
 
-        <article class="case-study">
+        <article class="case-study" id="case-study-conta">
           <header>
-            <h2>Improving Conversion on a SaaS Landing Page</h2>
-            <p class="meta">Role: Front-end & UX | Duration: 6 weeks</p>
+            <h2 class="subheader">Automatizando la contabilidad de autónomos en España con un flujo CLI-first (Conta)</h2>
+            <p class="meta">Rol: ingeniero backend y de herramientas | Duración: proyecto paralelo en curso</p>
           </header>
           <section>
-            <h3>Context</h3>
+            <h3>Contexto</h3>
             <p>
-              Briefly describe the product, target audience, and the problem you were trying to solve.
+              Como profesional autónomo en España, necesitaba gestionar facturas emitidas, gastos deducibles,
+              cotizaciones a la seguridad social y obligaciones fiscales trimestrales (IVA e IRPF). Mi flujo de
+              trabajo anterior se basaba en hojas de cálculo y cálculos manuales antes de presentar los modelos
+              oficiales como el Modelo 130, lo que era propenso a errores y consumía mucho tiempo.
             </p>
           </section>
           <section>
-            <h3>Goals</h3>
+            <h3>Desafíos</h3>
             <ul>
-              <li>Increase sign-up conversion on the main landing page.</li>
-              <li>Improve page performance and perceived load time.</li>
-              <li>Clarify product value proposition above the fold.</li>
+              <li>Centralizar facturas, gastos y pagos relacionados con impuestos en un modelo de datos coherente.</li>
+              <li>Codificar en software las reglas fiscales españolas (trimestres, IVA devengado/deducible, base y retenciones de IRPF).</li>
+              <li>Diseñar un flujo de trabajo en CLI que fuera rápido de usar pero a la vez guiado y seguro para la contabilidad diaria.</li>
+              <li>Generar exportaciones y copias de seguridad que pudieran compartirse con una gestoría o utilizarse en auditorías.</li>
             </ul>
           </section>
           <section>
-            <h3>Process</h3>
+            <h3>Solución</h3>
             <p>
-              Outline your research, ideation, wireframing, and implementation steps. Mention tools and
-              methods you used.
+              Diseñé e implementé <strong>Conta</strong>, una aplicación de línea de comandos en Python que modela de
+              forma explícita el dominio contable y automatiza las partes más repetitivas de mi flujo de trabajo como autónomo.
             </p>
+            <ul>
+              <li>
+                Construcción de un modelo de dominio tipado con SQLModel y SQLite para entidades como facturas emitidas,
+                gastos deducibles, pagos de seguridad social y pagos fraccionados de IRPF.
+              </li>
+              <li>
+                Implementación de una CLI basada en Typer con comandos enfocados para registrar facturas (<code>emite</code>),
+                gastos (<code>gasto</code>) y listar datos por año o trimestre, utilizando tablas Rich para una salida legible en terminal.
+              </li>
+              <li>
+                Encapsulado de la lógica de IVA e IRPF en servicios dedicados que calculan snapshots trimestrales basados en datos reales,
+                reflejando la estructura de los modelos fiscales oficiales españoles.
+              </li>
+              <li>
+                Añadidos exportes CSV para los libros de IVA y un comando <code>backup-db</code> para poder archivar con seguridad
+                la base de datos SQLite o entregarla a una gestoría.
+              </li>
+            </ul>
           </section>
           <section>
-            <h3>Outcome</h3>
+            <h3>Impacto</h3>
             <p>
-              Share quantitative results (conversion, performance) if available, and qualitative feedback.
+              Con Conta, sustituí un flujo basado en hojas de cálculo frágiles por una rutina de CLI repetible.
+              Registrar facturas y gastos ahora se reduce a ejecutar unos pocos comandos, y los snapshots trimestrales de IVA e IRPF
+              pueden generarse bajo demanda. Esto reduce errores de cálculo manual, acorta el tiempo que dedico a preparar modelos
+              fiscales y me ofrece una visión más clara de mi situación financiera a lo largo del año.
             </p>
           </section>
         </article>
 
         <hr class="section-divider" />
 
-        <article class="case-study">
+        <article class="case-study" id="case-study-positive-duty">
           <header>
-            <h2>Designing a Component Library for a Product Team</h2>
-            <p class="meta">Role: UI Engineer | Duration: 3 months</p>
+            <h2 class="subheader">Automatizando revisiones anuales de formación en una plataforma de cumplimiento (Positive Duty)</h2>
+            <p class="meta">Rol: desarrollador full‑stack y de plataforma | Duración: proyecto en curso</p>
           </header>
           <section>
-            <h3>Context</h3>
-            <p>Describe the team, product, and pain points that led to creating a library.</p>
+            <h3>Contexto</h3>
+            <p>
+              Positive Duty es una plataforma de formación en cumplimiento multi‑tenant creada para dar soporte a la legislación
+              australiana Respect at Work. Los clientes necesitan que las personas empleadas repitan periódicamente módulos de
+              formación clave para mantenerse al día, pero los flujos anteriores se basaban en exportes manuales y hojas de cálculo,
+              lo que facilitaba que se pasaran por alto revisiones vencidas a medida que crecía el número de tenants y usuarios.
+            </p>
           </section>
           <section>
-            <h3>Challenges</h3>
+            <h3>Desafíos</h3>
             <ul>
-              <li>Inconsistent UI across multiple apps.</li>
-              <li>Lack of shared design tokens and components.</li>
-              <li>Slow development due to duplicated work.</li>
+              <li>Derivar fechas de revisión anual a partir de datos históricos de finalización en lugar de campos estáticos.</li>
+              <li>Diseñar una regla de aniversario (recordatorio a los 11 meses, vencimiento a los 12) que fuera correcta y fácil de explicar.</li>
+              <li>Garantizar la idempotencia de los recordatorios a escala para que las personas usuarias no reciban correos duplicados.</li>
+              <li>Mostrar recordatorios en varios canales (correo y UI del portal) sin saturar a las personas usuarias.</li>
+              <li>Proporcionar herramientas de diagnóstico y administración para sembrar datos, probar el comportamiento y depurar casos concretos.</li>
             </ul>
           </section>
           <section>
-            <h3>Solution</h3>
+            <h3>Solución</h3>
             <p>
-              Explain the architecture, technologies, and conventions you chose. Include rationale for key
-              decisions.
+              Implementé un motor de revisiones anuales que escanea a diario las finalizaciones de módulos, calcula quién debe revisar
+              formación y entrega recordatorios por correo y notificaciones in‑product, con salvaguardas de idempotencia y visibilidad
+              operativa.
             </p>
+            <ul>
+              <li>
+                Extensión del esquema de Prisma con modelos <code>ReminderDispatch</code> y <code>UINotification</code>
+                para registrar qué recordatorios se han enviado y persistir notificaciones in‑app por persona usuaria y módulo.
+              </li>
+              <li>
+                Construcción de un escáner diario en <code>anniversaryReminder.js</code> que agrega la última finalización por
+                usuario y módulo desde <code>ViewerModuleCertification</code>, calcula fechas de recordatorio a los 11 meses y
+                vencimiento a los 12, y omite a quienes aún no están en plazo.
+              </li>
+              <li>
+                Implementación de claves de idempotencia compuestas sobre
+                <code>(email, moduleId, completionAt, reminderType)</code> para que ejecuciones repetidas del job no envíen
+                recordatorios duplicados.
+              </li>
+              <li>
+                Integración del escáner con la infraestructura existente de <code>cronJobs.js</code> usando locks basados en ficheros
+                en un directorio <code>.locks</code> para evitar ejecuciones solapadas y registrar métricas de cada ejecución.
+              </li>
+              <li>
+                Añadidos endpoints de API específicos de aniversario (scan, diagnose, seed, mark-read) para que el equipo de
+                administración pueda lanzar escaneos, rellenar datos de prueba e inspeccionar por qué una persona usuaria concreta
+                recibió o no un recordatorio sin acceso directo a la base de datos.
+              </li>
+              <li>
+                Exposición del recuento de recordatorios en el portal mediante un contexto React <code>AnniversaryContext</code>
+                y un componente <code>NotificationBanner</code> que anuncia módulos pendientes de revisar, actualizándose en
+                navegación, foco y cambios de visibilidad.
+              </li>
+            </ul>
           </section>
           <section>
-            <h3>Impact</h3>
+            <h3>Impacto</h3>
             <p>
-              Summarize improvements in consistency, development speed, and collaboration.
+              El motor de revisiones anuales sustituyó un proceso de renovación manual basado en hojas de cálculo por un flujo
+              repetible y auditable. Los equipos de cumplimiento ahora tienen mayor confianza en que las personas que deben
+              revisar su formación reciben recordatorios a tiempo, mientras que administradores y stakeholders pueden diagnosticar
+              el comportamiento a través de herramientas internas y registros persistidos de recordatorios. Esto reduce la carga
+              operativa y ayuda a los tenants de Positive Duty a mantener el cumplimiento formativo a escala.
             </p>
           </section>
         </article>
+
+        <hr class="section-divider" />
+
+        <article class="case-study" id="case-study-extended-bandoneon">
+          <header>
+            <h2 class="subheader">Diseñando un flujo de soundbank para una biblioteca online de bandoneón (Extended Bandoneon)</h2>
+            <p class="meta">Rol: desarrollador full‑stack | Duración: proyecto en curso</p>
+          </header>
+          <section>
+            <h3>Contexto</h3>
+            <p>
+              Extended Bandoneon es un proyecto de investigación e interpretación en torno al instrumento bandoneón. Uno de los
+              objetivos clave de la aplicación web es publicar un soundbank online curado con muestras de bandoneón de alta calidad
+              que intérpretes, productores e investigadores puedan explorar, previsualizar y descargar.
+            </p>
+          </section>
+          <section>
+            <h3>Desafíos</h3>
+            <ul>
+              <li>Modelar sonidos y soundpacks entre MySQL y Cloudinary manteniendo el metadato sincronizado.</li>
+              <li>Soportar subidas en WAV por calidad sirviendo al mismo tiempo archivos MP3 eficientes a las personas usuarias.</li>
+              <li>Diseñar un sistema de etiquetado y filtrado que funcione tanto para sonidos como para soundpacks.</li>
+              <li>Construir una UI de soundbank responsiva con reproducción mediante waveforms que escale con muchos sonidos.</li>
+              <li>Hacer que el soundbank sea fácilmente descubrible con datos estructurados sin duplicar lógica de negocio.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Solución</h3>
+            <p>
+              Implementé un flujo de soundbank de extremo a extremo que ingiere audio en Cloudinary, normaliza el metadato en MySQL
+              y expone una biblioteca de sonidos filtrable, optimizada para SEO, con reproducción mediante waveforms y descargas
+              controladas.
+            </p>
+            <ul>
+              <li>
+                Modelado de sonidos, soundpacks y hashtags en un esquema relacional, con una capa fina <code>db</code>
+                para consultas y mutaciones, de modo que las rutas de API de Next.js se centren en el comportamiento y no en la
+                gestión de conexiones.
+              </li>
+              <li>
+                Construcción de un endpoint de subida exclusivo para administradores que acepta ficheros WAV o MP3, los sube a
+                Cloudinary, convierte WAV a MP3 cuando es necesario y almacena duración, tamaño y URLs canónicas de MP3 en la
+                tabla <code>sounds</code>.
+              </li>
+              <li>
+                Implementación de gestión de soundpacks y etiquetado para que editores puedan definir soundpacks con etiquetas
+                compartidas; los sonidos individuales heredan esas etiquetas y pueden añadir las suyas, todo persistido mediante
+                un modelo normalizado <code>hashtags</code>/<code>entity_hashtags</code>.
+              </li>
+              <li>
+                Exposición de un endpoint público <code>/api/sounds</code> que realiza paginación basada en cursores, une
+                soundpacks y etiquetas, filtra los activos MP3 del soundbank y devuelve una forma amigable para el cliente de
+                React Query en la página de soundbank.
+              </li>
+              <li>
+                Construcción del frontend del soundbank con scroll infinito, filtros por soundpack y etiquetas, y un componente
+                <code>SoundPlayer</code> personalizado usando WaveSurfer.js para renderizar formas de onda y controlar la
+                reproducción sin depender de los controles nativos del navegador.
+              </li>
+              <li>
+                Añadidos datos estructurados JSON‑LD para el soundbank mediante un helper
+                <code>generateSoundbankStructuredData</code> para que los motores de búsqueda puedan indexar la colección como un
+                conjunto de recursos <code>AudioObject</code>.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Impacto</h3>
+            <p>
+              El flujo de soundbank transformó una colección estática de archivos de audio en una biblioteca estructurada y
+              explorable. Las personas editoras pueden subir nuevos sonidos de bandoneón y organizarlos en soundpacks sin tocar
+              código, mientras que las personas visitantes obtienen reproducción rápida con waveforms, filtros útiles y
+              descargas controladas. Esto hace que el proyecto Extended Bandoneon sea más útil para intérpretes, productores e
+              investigadores y proporciona una base sólida para futuras herramientas como datasets o utilidades de análisis.
+            </p>
+          </section>
+        </article>
+
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Manuel Krapovickas. All rights reserved.</p>
+      <p data-i18n="footer.copyright"></p>
       <ul class="footer-links">
         <li><a href="https://github.com/manuK1777"
             target="_blank"

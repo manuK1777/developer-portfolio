@@ -19,10 +19,10 @@
       </button>
       <nav class="site-nav" aria-label="Main">
         <ul>
-          <li><a href="index.html">Home / About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="case-studies.html">Case Studies</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Inicio / Sobre mí</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Proyectos</a></li>
+          <li><a href="case-studies.html" data-i18n="nav.caseStudies">Casos de estudio</a></li>
+          <li><a href="contact.html" class="active" data-i18n="nav.contact">Contacto</a></li>
           <li class="lang-toggle">
             <button type="button" class="lang-link" data-lang="en">EN</button>
             |
@@ -37,45 +37,44 @@
     <section class="section">
       <div class="container">
         <header class="section-header-contact">
-          <h1>Contact</h1>
-          <p>Use the form below or reach out directly via email and social links.</p>
+          <h1>Contacto</h1>
+          <p>Utiliza el formulario o contáctame directamente por correo electrónico o redes.</p>
         </header>
 
         <div class="grid two-cols contact-layout">
           <div>
             <form class="contact-form" id="contact-form" novalidate>
               <div class="form-field">
-                <label for="name">Name</label>
+                <label for="name">Nombre</label>
                 <input type="text" id="name" name="name" required />
                 <p class="field-error" data-for="name"></p>
               </div>
 
               <div class="form-field">
-                <label for="email">Email</label>
+                <label for="email">Correo electrónico</label>
                 <input type="email" id="email" name="email" required />
                 <p class="field-error" data-for="email"></p>
               </div>
 
               <div class="form-field">
-                <label for="message">Message</label>
+                <label for="message">Mensaje</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
                 <p class="field-error" data-for="message"></p>
               </div>
 
-              <button type="submit" class="btn primary">Send Message</button>
+              <button type="submit" class="btn primary">Enviar mensaje</button>
               <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
             </form>
           </div>
 
           <div>
-            <h2>Other Ways to Reach Me</h2>
+            <h2>Otras formas de contactarme</h2>
             <p>
-              Replace this text with your preferred contact details: email address, location, and
-              availability.
+              También puedes escribirme directamente o conectar conmigo a través de GitHub y LinkedIn.
             </p>
             <ul class="contact-details">
-              <li><strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a></li>
-              <li><strong>Location:</strong> Your City, Country</li>
+              <li><strong>Correo:</strong> <a href="mailto:manuel.krapovickas@gmail.com">manuel.krapovickas@gmail.com</a></li>
+              <li><strong>Ubicación:</strong> Barcelona, España</li>
             </ul>
           </div>
         </div>
@@ -85,7 +84,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Manuel Krapovickas. All rights reserved.</p>
+      <p data-i18n="footer.copyright"></p>
       <ul class="footer-links">
         <li><a href="https://github.com/manuK1777"
             target="_blank"
