@@ -16,8 +16,8 @@
   },
   "about": {
     "heading": "Sobre mí",
-    "intro": "Soy un desarrollador full-stack con foco en frontend, especializado en la creación de plataformas SaaS y herramientas internas orientadas a UI/UX, utilizando tecnologías web modernas.",
-    "body": "Soy un desarrollador altamente disciplinado y orientado al detalle, con un fuerte enfoque en la colaboración y la mejora continua. Disfruto especialmente trabajar en interfaces complejas, herramientas internas y productos donde las decisiones de diseño e ingeniería tienen un impacto directo en los usuarios reales.",
+    "intro": "Soy un desarrollador de software full‑stack con foco en frontend, especializado en la creación de productos SaaS orientados a UI/UX, plataformas internas y herramientas creativas utilizando tecnologías web modernas.",
+    "body": "Aplico un enfoque disciplinado y orientado al detalle, con un fuerte énfasis en la colaboración y la mejora continua. Disfruto especialmente trabajar en interfaces complejas, herramientas internas y productos donde las decisiones de diseño e ingeniería tienen un impacto directo en los usuarios reales.",
     "coreSkillsHeading": "Habilidades clave",
     "skills": [
       "Ingeniería Frontend moderna (JavaScript, TypeScript, React, Next.js, Angular, Node.js)",
@@ -34,7 +34,7 @@
   "projectOneBody": "Plataforma web que ofrece formación en cumplimiento normativo bajo la ley australiana Respect at Work. Rol: desarrollador full‑stack con foco en frontend. Diseño UI/UX.",
   "projectOneCta": "Ver detalles del proyecto",
   "caseStudyHeading": "Caso de estudio",
-  "caseStudyBody": "Diseño de un flujo de creación de biblioteca de sonidos para una librería online de bandoneón.",
+  "caseStudyBody": "Diseño de flujo de creación de biblioteca de sonidos para una librería online de bandoneón.",
   "caseStudyCta": "Leer caso de estudio",
   "collabHeading": "Colaboremos",
   "collabBody": "¿Te interesa trabajar juntos en un producto, herramienta interna o proyecto web creativo? Estoy disponible para colaborar.",
