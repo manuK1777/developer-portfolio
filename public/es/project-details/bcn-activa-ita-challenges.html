@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects - Web Dev Portfolio</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="../index.html" class="logo">
+          <img src="/assets/images/logo-red.png" alt="Logo" />
+        </a>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="../index.html">Home / About</a></li>
+            <li><a href="../projects.html" class="active">Projects</a></li>
+            <li><a href="../case-studies.html">Case Studies</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li class="lang-toggle">
+              <button type="button" class="lang-link" data-lang="en">EN</button>
+              |
+              <button type="button" class="lang-link" data-lang="es">ES</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <section class="section">
+        <div class="container">
+          <header class="section-header">
+            <h1>Barcelona Activa IT Academy Challenges</h1>
+          </header>
+
+          <div class="project-detail">
+            <p class="meta">
+              Role: Front-end Developer (Practical Training)<br />
+              Organisation: Barcelona Activa IT Academy<br />
+              Period: March &ndash; April 2025
+            </p>
+
+            <p>
+              Contributed to the front-end development of the
+              <strong>IT Academy Challenges</strong> platform, an Angular-based
+              application used in the Barcelona Activa IT Academy programme to
+              deliver programming exercises, starter code, and learning
+              resources. The platform provides dedicated interfaces for students
+              and mentors, enabling browsing of challenges, solution submission
+              workflows, and role-aware access to mentoring tools.
+            </p>
+
+            <p>
+              View the project:
+              <a
+                class="project-link"
+                href="https://github.com/IT-Academy-BCN/ita-challenges-frontend"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Source code on GitHub</a
+              >
+            </p>
+
+            <h1 class="subheader">Core Responsibilities &amp; Contributions</h1>
+
+            <h2>Platform Architecture &amp; Shared UI</h2>
+            <ul>
+              <li>
+                Worked within a modular Angular architecture, with a
+                <code>CoreModule</code> providing layout components (header,
+                main menu, footer) and feature modules for starter, challenge,
+                profile, and mentor areas.
+              </li>
+              <li>
+                Helped wire feature modules into the root
+                <code>AppModule</code>, ensuring the platform remained
+                maintainable and easy to extend as new challenge types and views
+                were added.
+              </li>
+              <li>
+                Used Bootstrap and NgBootstrap for layout and modal
+                interactions, making sure challenge and resource pages were
+                responsive across common screen sizes.
+              </li>
+              <li>
+                Contributed to shared components such as breadcrumbs,
+                pagination, and cards to keep navigation and visual language
+                consistent across the platform.
+              </li>
+            </ul>
+
+            <h2>Mentor Login &amp; Role-Aware Experience</h2>
+            <ul>
+              <li>
+                Implemented the front-end flow for mentor authentication using
+                GitHub OAuth in the standalone
+                <code>MentorLoginComponent</code>, handling the
+                <code>code</code> query parameter, calling the backend
+                validation endpoint, and displaying localized error states.
+              </li>
+              <li>
+                On successful authentication, stored the issued JWT and
+                username in <code>localStorage</code> and delegated token
+                decoding to <code>AuthService</code> so that role, username, and
+                user ID could be propagated via RxJS
+                <code>BehaviorSubject</code> streams.
+              </li>
+              <li>
+                Used a Bootstrap modal (<code>mentorLoginModal</code>) to drive
+                the mentor login UX, automatically opening when a valid GitHub
+                <code>code</code> was present in the URL and cleaning up form
+                state and errors when the modal was closed.
+              </li>
+              <li>
+                Integrated <code>@ngx-translate</code> to surface localized
+                errors for unauthorized mentors, server failures, and invalid
+                GitHub users, keeping mentor-facing feedback clear during
+                training sessions.
+              </li>
+            </ul>
+
+            <h2>Student Challenge Discovery &amp; Favorites</h2>
+            <ul>
+              <li>
+                Implemented the <code>ChallengeCardComponent</code> to present
+                individual challenges with title, languages, difficulty level,
+                popularity, and favorites count, using
+                <code>@ngx-translate</code> to adapt labels to the current
+                language.
+              </li>
+              <li>
+                Added logic in the challenge card to read and persist favorite
+                status via <code>localStorage</code>, so students could see
+                which challenges they had already marked as favorites even after
+                a page refresh.
+              </li>
+              <li>
+                Extended <code>ChallengeService</code> with mocked
+                <code>addToFavorites</code> and <code>removeFromFavorites</code>
+                methods returning RxJS <code>Observable</code>s, updating both
+                <code>is_favorite_{id}</code> and
+                <code>favorites_count_{id}</code> keys in
+                <code>localStorage</code> and simulating backend latency with a
+                small <code>delay</code>.
+              </li>
+              <li>
+                Ensured the favorites UX felt realistic for students while
+                remaining safe to run entirely from the frontend in a classroom
+                or sandbox environment.
+              </li>
+            </ul>
+
+            <h2>Student Journey &amp; Solution Submission</h2>
+            <ul>
+              <li>
+                Supported the student flow from challenge discovery through
+                completion by using <code>ChallengeService</code> to track
+                whether a challenge had been started via a
+                <code>BehaviorSubject</code> and a <code>challengeStarted</code>
+                flag stored in <code>localStorage</code>.
+              </li>
+              <li>
+                Connected this state to the solution submission UX, so that
+                starting a challenge would enable appropriate controls and
+                opening the "send solution" modal would reset the started flag
+                and move the student into a submission-focused flow.
+              </li>
+              <li>
+                Helped wire this behaviour into modal-driven components used to
+                upload or send solutions, keeping the student journey clear and
+                avoiding inconsistent UI states.
+              </li>
+            </ul>
+
+            <h2>Navigation, Breadcrumbs &amp; Resources</h2>
+            <ul>
+              <li>
+                Used a <code>BreadcrumbComponent</code> backed by
+                <code>BreadcrumbService</code> to generate dynamic breadcrumb
+                trails (for example, Home &rArr; Challenges &rArr; Specific
+                challenge), helping students orient themselves when moving
+                between views.
+              </li>
+              <li>
+                Contributed to shared resource and challenge listing UIs,
+                including card components and pagination, so that both exercises
+                and learning materials presented consistent metadata and
+                interactions.
+              </li>
+              <li>
+                Ensured the navigation and layout worked well with the
+                application's multilingual setup (Catalan by default, with
+                support for additional languages through translation files and
+                <code>TranslateHttpLoader</code>).
+              </li>
+            </ul>
+
+            <h2>Tech Stack &amp; Practices</h2>
+            <ul>
+              <li>
+                Angular and TypeScript for the application architecture and
+                state management, complemented by RxJS observables for shared
+                auth and challenge state.
+              </li>
+              <li>
+                HTML5, CSS3, Bootstrap, and NgBootstrap for responsive layout
+                and modal interactions.
+              </li>
+              <li>
+                <code>@ngx-translate</code> and a custom <code>I18nModule</code>
+                for translations and locale-aware UI behaviour.
+              </li>
+              <li>
+                Local storage-based mocking for favorites and challenge state to
+                decouple front-end exercises from backend availability during
+                practice sessions.
+              </li>
+            </ul>
+
+            <div class="project-slideshow" data-slideshow>
+              <h2 class="slideshow-header">Project Gallery</h2>
+              <button
+                class="slide-nav prev"
+                type="button"
+                aria-label="Previous image"
+              >
+                ‹
+              </button>
+
+              <div class="slides" data-slides>
+                <figure class="slide is-active">
+                  <img
+                    src="/assets/projects/itacademy/itacademy-01.webp"
+                    alt="Welcome screen"
+                  />
+                  <figcaption>
+                    Welcome
+                  </figcaption>
+                </figure>
+
+                <figure class="slide">
+                  <img
+                    src="/assets/projects/itacademy/itacademy-02.webp"
+                    alt="Dashboard screen"
+                  />
+                  <figcaption>
+                    Dashboard
+                  </figcaption>
+                </figure>
+
+                <figure class="slide">
+                  <img
+                    src="/assets/projects/itacademy/itacademy-03.webp"
+                    alt="Login screen"
+                  />
+                  <figcaption>
+                    Login
+                  </figcaption>
+                </figure>
+
+                <figure class="slide">
+                  <img
+                    src="/assets/projects/itacademy/itacademy-04.webp"
+                    alt="Resources screen"
+                  />
+                  <figcaption>
+                    Resources
+                  </figcaption>
+                </figure>
+
+                <figure class="slide">
+                  <img
+                    src="/assets/projects/itacademy/itacademy-05.webp"
+                    alt="React resources screen"
+                  />
+                  <figcaption>
+                    React resources
+                  </figcaption>
+                </figure>
+
+                <figure class="slide">
+                  <img
+                    src="/assets/projects/itacademy/itacademy-06.webp"
+                    alt="Create challenge screen"
+                  />
+                  <figcaption>
+                    Create challenge 
+                  </figcaption>
+                </figure>
+              </div>
+
+              <button
+                class="slide-nav next"
+                type="button"
+                aria-label="Next image"
+              >
+                ›
+              </button>
+              <div class="slide-dots" data-dots></div>
+            </div>
+
+            <div class="project-nav">
+              <p class="to-previous-project">
+                <a class="project-link" href="conta.html"
+                  >&lArr; Previous project</a
+                >
+              </p>
+              <p class="back-to-projects">
+                <a class="project-link" href="../projects.html"
+                  >Back to projects list</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          &copy; <span id="year"></span> Manuel Krapovickas. All rights
+          reserved.
+        </p>
+        <ul class="footer-links">
+          <li>
+            <a
+              href="https://github.com/manuK1777"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/manuel-krapovickas/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/slideshow.js"></script>
+  </body>
+</html>

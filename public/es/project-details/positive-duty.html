@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Positive Duty - Detalles del proyecto</title>
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">
+        <img src="/assets/images/logo-red.png" alt="Logo" />
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li>
+            <a href="../index.html" data-i18n="nav.home">Inicio / Sobre mí</a>
+          </li>
+          <li>
+            <a href="../projects.html" class="active" data-i18n="nav.projects">Proyectos</a>
+          </li>
+          <li>
+            <a href="../case-studies.html" data-i18n="nav.caseStudies">Casos de estudio</a>
+          </li>
+          <li>
+            <a href="../contact.html" data-i18n="nav.contact">Contacto</a>
+          </li>
+          <li class="lang-toggle">
+            <button type="button" class="lang-link" data-lang="en">EN</button>
+            |
+            <button type="button" class="lang-link" data-lang="es">ES</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+   <main class="site-main">
+    <section class="section">
+      <div class="container">
+        <header class="section-header">
+          <h1>Positive Duty</h1>
+        </header>
+        <div class="project-detail">
+          <p class="meta">
+            Rol: desarrollador web - diseñador UI/UX<br />
+            Empresa: JPL Media - Positive Duty
+          </p>
+
+          <p>
+           Contribuí al desarrollo de Positive Duty v2, una plataforma de formación en cumplimiento multi‑tenant
+           creada para apoyar la legislación australiana Respect at Work. Trabajé como desarrollador full‑stack con
+           foco en frontend, abarcando arquitectura de UI, flujos de autenticación, sistemas de informes y
+           herramientas administrativas para los portales de empleados, administradores y superadministradores.
+          </p>
+          <p>
+            <a class="project-link" href="../case-studies.html#case-study-positive-duty">Leer el caso de estudio completo &rarr;</a>
+          </p>
+
+          <h1 class="subheader">Responsabilidades principales y contribuciones</h1>
+
+          <h2>Arquitectura de UI y desarrollo frontend</h2>
+          <ul>
+            <li>Construí interfaces responsivas y accesibles utilizando Next.js, React, TypeScript y Tailwind CSS.</li>
+            <li>Diseñé una arquitectura de UI basada en componentes para una plataforma multirol y escalable.</li>
+            <li>Creé wireframes y flujos de UX en Figma, traduciendo requisitos de producto en interfaces listas para producción.</li>
+            <li>Implementé navegación basada en roles y rutas protegidas para los portales de empleados, administradores y superadministradores.</li>
+          </ul>
+
+          <h2>Sistemas de producto y plataforma</h2>
+          <h3>Plataforma de formación y reporting</h3>
+          <ul>
+            <li>
+              Entrega de módulos de formación en video con seguimiento de progreso y flujos de certificación.
+            </li>
+            <li>
+              Construcción de paneles de informes con capacidades de filtrado y programación.
+            </li>
+            <li>
+              Desarrollo de interfaces de gestión de recursos con visibilidad de contenido controlada.
+            </li>
+          </ul>
+
+          <h3>Controles de superadministración multi‑tenant</h3>
+          <ul>
+            <li>
+              Implementación de herramientas centralizadas para configuración a nivel de cliente y activación/desactivación de funcionalidades.
+            </li>
+            <li>
+              Construcción de sistemas de visibilidad para gestionar contenido a través de múltiples despliegues.
+            </li>
+          </ul>
+
+          <h3>Revisión anual y automatización del cumplimiento</h3>
+          <ul>
+            <li>
+             Diseño e implementación de un sistema de recordatorios basado en aniversarios para automatizar las renovaciones de formación obligatoria.
+            </li>
+            <li>
+              Ampliación del esquema SQL para registrar fechas de finalización por usuario.
+            </li>
+            <li>
+              Construcción de procesos en segundo plano programados para calcular ciclos de revisión anual.
+            </li>
+            <li>
+              Integración de notificaciones automáticas por correo electrónico y monitorización a nivel de administración.
+            </li>
+            <li>
+              Eliminación del seguimiento manual del cumplimiento en los distintos tenants.
+            </li>
+          </ul>
+
+          <h2>Autenticación y seguridad</h2>
+
+          <ul>
+            <li>
+              Implementación de flujos de autenticación personalizados utilizando Keycloak (OIDC + OTP por correo electrónico).
+            </li>
+            <li>
+              Gestión de sesiones y control de acceso basado en roles.
+            </li>
+            <li>
+              Contribución a la integración segura de APIs en entornos multi‑tenant.
+            </li>
+          </ul>
+
+          <h2>Despliegue y colaboración</h2>
+
+          <ul>
+            <li>
+              Colaboración estrecha con los equipos de backend y DevOps.
+            </li>
+            <li>
+              Soporte a los flujos de despliegue utilizando Kubernetes, Helm y Rancher.
+            </li>
+            <li>
+              Contribución en todo el ciclo de vida del producto, desde el diseño hasta la puesta en producción.
+            </li>
+          </ul>
+
+          <div class="project-slideshow" data-slideshow>
+            <h2 class="slideshow-header">Galería del proyecto</h2>
+            <button class="slide-nav prev" type="button" aria-label="Imagen anterior">‹</button>
+            <div class="slides" data-slides>
+              <figure class="slide is-active">
+                <img src="/assets/projects/positive-duty/positive-duty-01.webp" alt="Pantalla de bienvenida de Positive Duty" />
+                <figcaption>Pantalla de bienvenida</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-02.webp" alt="Pantalla de inicio de sesión de Positive Duty" />
+                <figcaption>Inicio de sesión</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-03.webp" alt="Pantalla de verificación de código de Positive Duty" />
+                <figcaption>Verificar código</figcaption>
+              </figure>
+               <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-04.webp" alt="Pantalla para introducir código en Positive Duty" />
+                <figcaption>Introducir código</figcaption>
+              </figure>
+                <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-05.webp" alt="Panel de usuario de Positive Duty" />
+                <figcaption>Panel de usuario</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-06.webp" alt="Canal de video de Positive Duty" />
+                <figcaption>Canal de video</figcaption>
+              </figure>
+               <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-07.webp" alt="Centro de administración de Positive Duty" />
+                <figcaption>Centro de administración</figcaption>
+              </figure>
+                 <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-08.webp" alt="Diálogo modal de recursos en Positive Duty" />
+                <figcaption>Diálogo modal de recursos</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-09.webp" alt="Informes en Positive Duty" />
+                <figcaption>Informes</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-10.webp" alt="Diálogo modal para crear informe en Positive Duty" />
+                <figcaption>Diálogo modal para crear informe</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-11.webp" alt="Administración de usuarios en Positive Duty" />
+                <figcaption>Gestión de usuarios</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-12.webp" alt="Diálogo modal para editar usuario en Positive Duty" />
+                <figcaption>Diálogo modal para editar usuario</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-13.webp" alt="Configuración del centro de administración de Positive Duty" />
+                <figcaption>Configuración del centro de administración</figcaption>
+              </figure>
+               <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-superdamin-01.webp" alt="Panel del superadministrador de Positive Duty" />
+                <figcaption>Panel de superadministrador</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-superdamin-02.webp" alt="Lista de sitios del superadministrador de Positive Duty" />
+                <figcaption>Lista de sitios del superadministrador</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-superdamin-03.webp" alt="Gestión de sitios del superadministrador de Positive Duty" />
+                <figcaption>Gestión de sitios del superadministrador</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-superdamin-04.webp" alt="Generación manual de certificados por el superadministrador en Positive Duty" />
+                <figcaption>Generación manual de certificados (superadministrador)</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-superdamin-05.webp" alt="Gestión de informes por el superadministrador en Positive Duty" />
+                <figcaption>Gestión de informes (superadministrador)</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-superdamin-06.webp" alt="Controles de visibilidad de recursos y módulos de video por sitio en Positive Duty" />
+                <figcaption>Controles de visibilidad de recursos y módulos de video por sitio (superadministrador)</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-superdamin-07.webp" alt="Gestión de actualizaciones tipo blog por el superadministrador en Positive Duty" />
+                <figcaption>Gestión de actualizaciones tipo blog (superadministrador)</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-superdamin-08.webp" alt="Diálogo modal para crear actualizaciones por el superadministrador en Positive Duty" />
+                <figcaption>Diálogo modal para crear actualización (superadministrador)</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-superdamin-09.webp" alt="Gestión de recursos por el superadministrador en Positive Duty" />
+                <figcaption>Gestión de recursos (superadministrador)</figcaption>
+              </figure>
+               <figure class="slide">
+                <img src="/assets/projects/positive-duty/positive-duty-superdamin-010.webp" alt="Diálogo modal para editar recursos por el superadministrador en Positive Duty" />
+                <figcaption>Diálogo modal para editar recursos (superadministrador)</figcaption>
+              </figure>
+            </div>
+            <button class="slide-nav next" type="button" aria-label="Siguiente imagen">›</button>
+            <div class="slide-dots" data-dots></div>
+          </div>
+        </div>
+
+          <div class="project-nav">
+              <p class="back-to-projects">
+                <a class="project-link" href="../projects.html">Volver a la lista de proyectos</a>
+              </p>
+              <p class="to-next-project">
+                <a class="project-link" href="extended-bandoneon.html">Siguiente proyecto &rArr;</a>
+              </p>
+           </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p data-i18n="footer.copyright"></p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/manuK1777"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/manuel-krapovickas/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/slideshow.js"></script>
+  <script src="/js/projects.js"></script>
+</body>
+</html>
