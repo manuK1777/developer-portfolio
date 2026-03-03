@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Projects - Web Dev Portfolio</title>
+    <title>Barcelona Activa IT Academy Challenges - Detalles del proyecto</title>
     <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
@@ -23,10 +23,18 @@
         </button>
         <nav class="site-nav" aria-label="Main">
           <ul>
-            <li><a href="../index.html">Home / About</a></li>
-            <li><a href="../projects.html" class="active">Projects</a></li>
-            <li><a href="../case-studies.html">Case Studies</a></li>
-            <li><a href="../contact.html">Contact</a></li>
+            <li>
+              <a href="../index.html" data-i18n="nav.home">Inicio / Sobre mí</a>
+            </li>
+            <li>
+              <a href="../projects.html" class="active" data-i18n="nav.projects">Proyectos</a>
+            </li>
+            <li>
+              <a href="../case-studies.html" data-i18n="nav.caseStudies">Casos de estudio</a>
+            </li>
+            <li>
+              <a href="../contact.html" data-i18n="nav.contact">Contacto</a>
+            </li>
             <li class="lang-toggle">
               <button type="button" class="lang-link" data-lang="en">EN</button>
               |
@@ -46,194 +54,202 @@
 
           <div class="project-detail">
             <p class="meta">
-              Role: Front-end Developer (Practical Training)<br />
-              Organisation: Barcelona Activa IT Academy<br />
-              Period: March &ndash; April 2025
+              Rol: desarrollador frontend (formación práctica)<br />
+              Organización: Barcelona Activa IT Academy<br />
+              Periodo: marzo &ndash; abril de 2025
             </p>
 
             <p>
-              Contributed to the front-end development of the
-              <strong>IT Academy Challenges</strong> platform, an Angular-based
-              application used in the Barcelona Activa IT Academy programme to
-              deliver programming exercises, starter code, and learning
-              resources. The platform provides dedicated interfaces for students
-              and mentors, enabling browsing of challenges, solution submission
-              workflows, and role-aware access to mentoring tools.
+              Colaboré en el desarrollo frontend de la plataforma
+              <strong>IT Academy Challenges</strong>, una aplicación basada en
+              Angular utilizada en el programa IT Academy de Barcelona Activa
+              para ofrecer ejercicios de programación, código inicial y
+              recursos de aprendizaje. La plataforma proporciona interfaces
+              específicas para estudiantes y mentores, permitiendo navegar por
+              retos, gestionar flujos de envío de soluciones y acceder a
+              herramientas de mentoría según el rol.
             </p>
 
             <p>
-              View the project:
+              Ver el proyecto:
               <a
                 class="project-link"
                 href="https://github.com/IT-Academy-BCN/ita-challenges-frontend"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Source code on GitHub</a
+                >Código fuente en GitHub</a
               >
             </p>
 
-            <h1 class="subheader">Core Responsibilities &amp; Contributions</h1>
+            <h1 class="subheader">Responsabilidades principales y contribuciones</h1>
 
-            <h2>Platform Architecture &amp; Shared UI</h2>
+            <h2>Arquitectura de la plataforma y UI compartida</h2>
             <ul>
               <li>
-                Worked within a modular Angular architecture, with a
-                <code>CoreModule</code> providing layout components (header,
-                main menu, footer) and feature modules for starter, challenge,
-                profile, and mentor areas.
+                Trabajo dentro de una arquitectura modular en Angular, con un
+                <code>CoreModule</code> que proporciona componentes de layout
+                (cabecera, menú principal, pie) y módulos de funcionalidad para
+                las áreas de inicio, retos, perfil y mentoría.
               </li>
               <li>
-                Helped wire feature modules into the root
-                <code>AppModule</code>, ensuring the platform remained
-                maintainable and easy to extend as new challenge types and views
-                were added.
+                Contribución a la integración de los módulos de funcionalidad en
+                el <code>AppModule</code> raíz, garantizando que la plataforma
+                se mantuviera fácil de extender a medida que se añadían nuevos
+                tipos de retos y vistas.
               </li>
               <li>
-                Used Bootstrap and NgBootstrap for layout and modal
-                interactions, making sure challenge and resource pages were
-                responsive across common screen sizes.
+                Uso de Bootstrap y NgBootstrap para el layout y las
+                interacciones con modales, asegurando que las páginas de retos y
+                recursos fueran responsivas en los tamaños de pantalla más
+                habituales.
               </li>
               <li>
-                Contributed to shared components such as breadcrumbs,
-                pagination, and cards to keep navigation and visual language
-                consistent across the platform.
+                Contribución a componentes compartidos como breadcrumbs,
+                paginación y tarjetas para mantener la navegación y el lenguaje
+                visual consistentes en toda la plataforma.
               </li>
             </ul>
 
-            <h2>Mentor Login &amp; Role-Aware Experience</h2>
+            <h2>Acceso de mentores y experiencia según rol</h2>
             <ul>
               <li>
-                Implemented the front-end flow for mentor authentication using
-                GitHub OAuth in the standalone
-                <code>MentorLoginComponent</code>, handling the
-                <code>code</code> query parameter, calling the backend
-                validation endpoint, and displaying localized error states.
+                Implementación del flujo frontend de autenticación de mentores
+                usando GitHub OAuth en el componente independiente
+                <code>MentorLoginComponent</code>, gestionando el parámetro de
+                consulta <code>code</code>, llamando al endpoint de validación
+                del backend y mostrando estados de error localizados.
               </li>
               <li>
-                On successful authentication, stored the issued JWT and
-                username in <code>localStorage</code> and delegated token
-                decoding to <code>AuthService</code> so that role, username, and
-                user ID could be propagated via RxJS
-                <code>BehaviorSubject</code> streams.
+                Tras una autenticación correcta, almacenamiento del JWT emitido
+                y del nombre de usuario en <code>localStorage</code> y
+                delegación del decodificado del token en <code>AuthService</code>
+                para propagar rol, nombre de usuario e ID de usuario mediante
+                flujos <code>BehaviorSubject</code> de RxJS.
               </li>
               <li>
-                Used a Bootstrap modal (<code>mentorLoginModal</code>) to drive
-                the mentor login UX, automatically opening when a valid GitHub
-                <code>code</code> was present in the URL and cleaning up form
-                state and errors when the modal was closed.
+                Uso de un modal de Bootstrap (<code>mentorLoginModal</code>)
+                para dirigir la UX de login de mentores, abriéndolo
+                automáticamente cuando había un <code>code</code> válido de
+                GitHub en la URL y limpiando el estado del formulario y los
+                errores al cerrar el modal.
               </li>
               <li>
-                Integrated <code>@ngx-translate</code> to surface localized
-                errors for unauthorized mentors, server failures, and invalid
-                GitHub users, keeping mentor-facing feedback clear during
-                training sessions.
+                Integración de <code>@ngx-translate</code> para mostrar errores
+                localizados en casos de mentores no autorizados, fallos de
+                servidor y usuarios de GitHub inválidos, manteniendo un feedback
+                claro para mentores durante las sesiones de formación.
               </li>
             </ul>
 
-            <h2>Student Challenge Discovery &amp; Favorites</h2>
+            <h2>Descubrimiento de retos y favoritos para estudiantes</h2>
             <ul>
               <li>
-                Implemented the <code>ChallengeCardComponent</code> to present
-                individual challenges with title, languages, difficulty level,
-                popularity, and favorites count, using
-                <code>@ngx-translate</code> to adapt labels to the current
-                language.
+                Implementación de <code>ChallengeCardComponent</code> para
+                presentar cada reto con título, lenguajes, nivel de dificultad,
+                popularidad y contador de favoritos, utilizando
+                <code>@ngx-translate</code> para adaptar las etiquetas al idioma
+                actual.
               </li>
               <li>
-                Added logic in the challenge card to read and persist favorite
-                status via <code>localStorage</code>, so students could see
-                which challenges they had already marked as favorites even after
-                a page refresh.
+                Añadida lógica en la tarjeta de reto para leer y persistir el
+                estado de favorito mediante <code>localStorage</code>, de modo
+                que el alumnado pudiera ver qué retos ya había marcado como
+                favoritos incluso tras recargar la página.
               </li>
               <li>
-                Extended <code>ChallengeService</code> with mocked
-                <code>addToFavorites</code> and <code>removeFromFavorites</code>
-                methods returning RxJS <code>Observable</code>s, updating both
-                <code>is_favorite_{id}</code> and
-                <code>favorites_count_{id}</code> keys in
-                <code>localStorage</code> and simulating backend latency with a
-                small <code>delay</code>.
+                Extensión de <code>ChallengeService</code> con métodos simulados
+                <code>addToFavorites</code> y <code>removeFromFavorites</code>
+                que devuelven <code>Observable</code>s de RxJS, actualizando las
+                claves <code>is_favorite_{id}</code> y
+                <code>favorites_count_{id}</code> en <code>localStorage</code> y
+                simulando latencia de backend con un pequeño
+                <code>delay</code>.
               </li>
               <li>
-                Ensured the favorites UX felt realistic for students while
-                remaining safe to run entirely from the frontend in a classroom
-                or sandbox environment.
+                Aseguramiento de que la UX de favoritos se sintiera realista
+                para el alumnado manteniendo al mismo tiempo la seguridad de una
+                ejecución íntegramente en el frontend en entornos de aula o
+                sandbox.
               </li>
             </ul>
 
-            <h2>Student Journey &amp; Solution Submission</h2>
+            <h2>Viaje del estudiante y envío de soluciones</h2>
             <ul>
               <li>
-                Supported the student flow from challenge discovery through
-                completion by using <code>ChallengeService</code> to track
-                whether a challenge had been started via a
-                <code>BehaviorSubject</code> and a <code>challengeStarted</code>
-                flag stored in <code>localStorage</code>.
+                Soporte al flujo del estudiante desde el descubrimiento del reto
+                hasta su finalización utilizando <code>ChallengeService</code>
+                para rastrear si un reto se había iniciado mediante un
+                <code>BehaviorSubject</code> y una bandera
+                <code>challengeStarted</code> almacenada en
+                <code>localStorage</code>.
               </li>
               <li>
-                Connected this state to the solution submission UX, so that
-                starting a challenge would enable appropriate controls and
-                opening the "send solution" modal would reset the started flag
-                and move the student into a submission-focused flow.
+                Conexión de este estado con la UX de envío de soluciones, de
+                modo que al iniciar un reto se habilitaran los controles
+                adecuados y al abrir el modal de "enviar solución" se
+                reiniciara la bandera de inicio y se llevara al estudiante a un
+                flujo centrado en la entrega.
               </li>
               <li>
-                Helped wire this behaviour into modal-driven components used to
-                upload or send solutions, keeping the student journey clear and
-                avoiding inconsistent UI states.
+                Integración de este comportamiento en componentes basados en
+                modales utilizados para subir o enviar soluciones, manteniendo
+                claro el recorrido del estudiante y evitando estados de UI
+                inconsistentes.
               </li>
             </ul>
 
-            <h2>Navigation, Breadcrumbs &amp; Resources</h2>
+            <h2>Navegación, breadcrumbs y recursos</h2>
             <ul>
               <li>
-                Used a <code>BreadcrumbComponent</code> backed by
-                <code>BreadcrumbService</code> to generate dynamic breadcrumb
-                trails (for example, Home &rArr; Challenges &rArr; Specific
-                challenge), helping students orient themselves when moving
-                between views.
+                Uso de <code>BreadcrumbComponent</code> respaldado por
+                <code>BreadcrumbService</code> para generar rutas de breadcrumbs
+                dinámicas (por ejemplo, Inicio &rArr; Retos &rArr; Reto
+                específico), ayudando al alumnado a orientarse al cambiar de
+                vista.
               </li>
               <li>
-                Contributed to shared resource and challenge listing UIs,
-                including card components and pagination, so that both exercises
-                and learning materials presented consistent metadata and
-                interactions.
+                Contribución a interfaces compartidas de listado de recursos y
+                retos, incluyendo componentes de tarjeta y paginación, de modo
+                que tanto los ejercicios como los materiales de aprendizaje
+                mostraran metadatos e interacciones consistentes.
               </li>
               <li>
-                Ensured the navigation and layout worked well with the
-                application's multilingual setup (Catalan by default, with
-                support for additional languages through translation files and
-                <code>TranslateHttpLoader</code>).
+                Garantía de que la navegación y el layout funcionaran bien con
+                la configuración multilingüe de la aplicación (catalán por
+                defecto, con soporte para idiomas adicionales mediante ficheros
+                de traducción y <code>TranslateHttpLoader</code>).
               </li>
             </ul>
 
-            <h2>Tech Stack &amp; Practices</h2>
+            <h2>Stack tecnológico y prácticas</h2>
             <ul>
               <li>
-                Angular and TypeScript for the application architecture and
-                state management, complemented by RxJS observables for shared
-                auth and challenge state.
+                Angular y TypeScript para la arquitectura de la aplicación y la
+                gestión de estado, complementados con observables de RxJS para
+                el estado compartido de autenticación y retos.
               </li>
               <li>
-                HTML5, CSS3, Bootstrap, and NgBootstrap for responsive layout
-                and modal interactions.
+                HTML5, CSS3, Bootstrap y NgBootstrap para el layout responsivo y
+                las interacciones con modales.
               </li>
               <li>
-                <code>@ngx-translate</code> and a custom <code>I18nModule</code>
-                for translations and locale-aware UI behaviour.
+                <code>@ngx-translate</code> y un <code>I18nModule</code>
+                personalizado para las traducciones y el comportamiento de la
+                UI sensible a la configuración regional.
               </li>
               <li>
-                Local storage-based mocking for favorites and challenge state to
-                decouple front-end exercises from backend availability during
-                practice sessions.
+                Simulación basada en almacenamiento local para favoritos y
+                estado de retos, desacoplando los ejercicios de frontend de la
+                disponibilidad del backend durante las sesiones de práctica.
               </li>
             </ul>
 
             <div class="project-slideshow" data-slideshow>
-              <h2 class="slideshow-header">Project Gallery</h2>
+              <h2 class="slideshow-header">Galería del proyecto</h2>
               <button
                 class="slide-nav prev"
                 type="button"
-                aria-label="Previous image"
+                aria-label="Imagen anterior"
               >
                 ‹
               </button>
@@ -242,60 +258,60 @@
                 <figure class="slide is-active">
                   <img
                     src="/assets/projects/itacademy/itacademy-01.webp"
-                    alt="Welcome screen"
+                    alt="Pantalla de bienvenida"
                   />
                   <figcaption>
-                    Welcome
+                    Pantalla de bienvenida
                   </figcaption>
                 </figure>
 
                 <figure class="slide">
                   <img
                     src="/assets/projects/itacademy/itacademy-02.webp"
-                    alt="Dashboard screen"
+                    alt="Pantalla de panel de control"
                   />
                   <figcaption>
-                    Dashboard
+                    Panel de control
                   </figcaption>
                 </figure>
 
                 <figure class="slide">
                   <img
                     src="/assets/projects/itacademy/itacademy-03.webp"
-                    alt="Login screen"
+                    alt="Pantalla de inicio de sesión"
                   />
                   <figcaption>
-                    Login
+                    Inicio de sesión
                   </figcaption>
                 </figure>
 
                 <figure class="slide">
                   <img
                     src="/assets/projects/itacademy/itacademy-04.webp"
-                    alt="Resources screen"
+                    alt="Pantalla de recursos"
                   />
                   <figcaption>
-                    Resources
+                    Recursos
                   </figcaption>
                 </figure>
 
                 <figure class="slide">
                   <img
                     src="/assets/projects/itacademy/itacademy-05.webp"
-                    alt="React resources screen"
+                    alt="Pantalla de recursos de React"
                   />
                   <figcaption>
-                    React resources
+                    Recursos de React
                   </figcaption>
                 </figure>
 
                 <figure class="slide">
                   <img
                     src="/assets/projects/itacademy/itacademy-06.webp"
-                    alt="Create challenge screen"
+                    alt="Pantalla para crear retos"
                   />
                   <figcaption>
-                    Create challenge 
+                    Crear reto
                   </figcaption>
                 </figure>
               </div>
@@ -303,7 +319,7 @@
               <button
                 class="slide-nav next"
                 type="button"
-                aria-label="Next image"
+                aria-label="Siguiente imagen"
               >
                 ›
               </button>
@@ -313,12 +329,12 @@
             <div class="project-nav">
               <p class="to-previous-project">
                 <a class="project-link" href="conta.html"
-                  >&lArr; Previous project</a
+                  >&lArr; Proyecto anterior</a
                 >
               </p>
               <p class="back-to-projects">
                 <a class="project-link" href="../projects.html"
-                  >Back to projects list</a
+                  >Volver a la lista de proyectos</a
                 >
               </p>
             </div>
@@ -329,10 +345,7 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>
-          &copy; <span id="year"></span> Manuel Krapovickas. All rights
-          reserved.
-        </p>
+        <p data-i18n="footer.copyright"></p>
         <ul class="footer-links">
           <li>
             <a

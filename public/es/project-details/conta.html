@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Projects - Web Dev Portfolio</title>
+    <title>Conta - Detalles del proyecto</title>
     <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
@@ -23,10 +23,18 @@
         </button>
         <nav class="site-nav" aria-label="Main">
           <ul>
-            <li><a href="../index.html">Home / About</a></li>
-            <li><a href="../projects.html" class="active">Projects</a></li>
-            <li><a href="../case-studies.html">Case Studies</a></li>
-            <li><a href="../contact.html">Contact</a></li>
+            <li>
+              <a href="../index.html" data-i18n="nav.home">Inicio / Sobre mí</a>
+            </li>
+            <li>
+              <a href="../projects.html" class="active" data-i18n="nav.projects">Proyectos</a>
+            </li>
+            <li>
+              <a href="../case-studies.html" data-i18n="nav.caseStudies">Casos de estudio</a>
+            </li>
+            <li>
+              <a href="../contact.html" data-i18n="nav.contact">Contacto</a>
+            </li>
             <li class="lang-toggle">
               <button type="button" class="lang-link" data-lang="en">EN</button>
               |
@@ -46,135 +54,138 @@
 
           <div class="project-detail">
             <p class="meta">
-              Role: Backend Developer &amp; Tooling Engineer<br />
-              Project: Independent CLI accounting tool for freelancers (Spain)
+              Rol: desarrollador backend e ingeniero de herramientas<br />
+              Proyecto: herramienta de contabilidad por línea de comandos para autónomos en España
             </p>
 
             <p>
-              Built <strong>Conta</strong>, a Python-based command-line tool that helps
-              self-employed professionals keep track of invoices, deductible
-              expenses, social security payments, and quarterly tax obligations
-              in Spain. The application combines a typed domain model,
-              SQLite-backed persistence, and task-focused commands to provide a
-              fast workflow for everyday bookkeeping.
+              Desarrollé <strong>Conta</strong>, una herramienta de línea de comandos en Python que ayuda a
+              profesionales autónomos a llevar el control de facturas emitidas, gastos deducibles, pagos de
+              seguridad social y obligaciones fiscales trimestrales en España. La aplicación combina un modelo de
+              dominio tipado, persistencia basada en SQLite y comandos orientados a tareas para ofrecer un flujo
+              de trabajo rápido en la contabilidad del día a día.
             </p>
 
             <p>
-              View the project:
-              <a class="project-link" href="https://github.com/manuK1777/Conta" target="_blank" rel="noopener noreferrer">Source code on GitHub</a>
+              Ver el proyecto:
+              <a class="project-link" href="https://github.com/manuK1777/Conta" target="_blank" rel="noopener noreferrer">Código fuente en GitHub</a>
             </p>
             <p>
-              <a class="project-link" href="../case-studies.html#case-study-conta">Read the full case study &rarr;</a>
+              <a class="project-link" href="../case-studies.html#case-study-conta">Leer el caso de estudio completo &rarr;</a>
             </p>
 
-            <h1 class="subheader">Core Responsibilities &amp; Contributions</h1>
+            <h1 class="subheader">Responsabilidades principales y contribuciones</h1>
 
-            <h2>Product Architecture &amp; System Design</h2>
+            <h2>Arquitectura de producto y diseño de sistema</h2>
             <ul>
               <li>
-                Designed a modular accounting engine using Python 3.10,
-                <code>sqlmodel</code>, <code>pydantic</code>, and SQLite for
-                local, file-based storage
+                Diseño de un motor de contabilidad modular utilizando Python 3.10,
+                <code>sqlmodel</code>, <code>pydantic</code> y SQLite para
+                almacenamiento local basado en ficheros.
               </li>
               <li>
-                Modeled core bookkeeping entities
+                Modelado de las entidades contables principales
                 (<code>FacturaEmitida</code>, <code>GastoDeducible</code>,
-                <code>PagoAutonomo</code>, <code>PagoFraccionado130</code>) with
-                explicit enums for activity types (<code>programacion</code>,
-                <code>musica</code>)
+                <code>PagoAutonomo</code>, <code>PagoFraccionado130</code>) con
+                enumeraciones explícitas para los tipos de actividad (<code>programacion</code>,
+                <code>musica</code>).
               </li>
               <li>
-                Structured the application as a reusable package with a
-                dedicated <code>conta</code> entry point and environment-based
-                configuration
-              </li>
-            </ul>
-
-            <h2>CLI UX &amp; Workflow Automation</h2>
-            <ul>
-              <li>
-                Implemented a multi-command CLI using Typer, with structured
-                help text and argument parsing tailored to Spanish tax workflows
-              </li>
-              <li>
-                Added commands to register issued invoices
-                (<code>emite</code>), deductible expenses
-                (<code>gasto</code>), autonomous social security payments, and
-                fractioned IRPF payments
-              </li>
-              <li>
-                Provided rich terminal output using the Rich library, including
-                tabular listings for invoices and expenses
-              </li>
-              <li>
-                Included validation and helpful error messages for dates,
-                numeric fields, and quarter formats to reduce user mistakes
+                Estructuración de la aplicación como un paquete reutilizable con un
+                punto de entrada <code>conta</code> dedicado y configuración basada
+                en variables de entorno.
               </li>
             </ul>
 
-            <h2>Tax &amp; Reporting Logic for Spanish Freelancers</h2>
+            <h2>Experiencia de CLI y automatización de flujos</h2>
             <ul>
               <li>
-                Encapsulated quarterly VAT (IVA) calculations in a dedicated
-                service, computing devengado (owed) and deducible (deductible)
-                VAT per quarter
+                Implementación de una CLI multi‑comando usando Typer, con ayuda
+                estructurada y parseo de argumentos adaptado a los flujos
+                fiscales españoles.
               </li>
               <li>
-                Implemented IRPF accumulated snapshot logic matching the
-                structure of Modelo 130 (base, withholdings, previous payments)
-                via the <code>irpf_snapshot_acumulado</code> service
+                Añadidos comandos para registrar facturas emitidas
+                (<code>emite</code>), gastos deducibles
+                (<code>gasto</code>), pagos de seguridad social de autónomos y
+                pagos fraccionados de IRPF.
               </li>
               <li>
-                Accounted for social security contributions, prior fractioned
-                payments, and activity filters to give a realistic view of
-                quarterly income tax obligations
+                Salida enriquecida en terminal utilizando la librería Rich,
+                incluyendo listados tabulares de facturas y gastos.
+              </li>
+              <li>
+                Inclusión de validaciones y mensajes de error útiles para
+                fechas, campos numéricos y formatos de trimestre, reduciendo
+                errores de usuario.
               </li>
             </ul>
 
-            <h2>Data Model &amp; Persistence</h2>
+            <h2>Lógica fiscal y de reporting para autónomos en España</h2>
             <ul>
               <li>
-                Used SQLModel to define typed tables with indexes on dates and
-                invoice numbers for efficient filtering and reporting
+                Encapsulado del cálculo trimestral de IVA en un servicio
+                dedicado, calculando el IVA devengado y deducible por trimestre.
               </li>
               <li>
-                Ensured idempotent operations for critical entities (e.g.
-                preventing duplicate invoice numbers on creation)
+                Implementación de la lógica de snapshot acumulado de IRPF,
+                alineada con la estructura del Modelo 130 (base, retenciones,
+                pagos previos) a través del servicio <code>irpf_snapshot_acumulado</code>.
               </li>
               <li>
-                Managed a lightweight SQLite database file, initialized via a
-                single <code>conta init</code> command
+                Consideración de cuotas de seguridad social, pagos fraccionados
+                previos y filtros por actividad para ofrecer una visión realista
+                de las obligaciones trimestrales de IRPF.
               </li>
             </ul>
 
-            <h2>Exports, Backups &amp; Extensibility</h2>
+            <h2>Modelo de datos y persistencia</h2>
             <ul>
               <li>
-                Built CSV export of official VAT books (libros de IVA) using
-                pandas, generating separate files for issued and received
-                invoices per quarter
+                Uso de SQLModel para definir tablas tipadas con índices en
+                fechas y números de factura para un filtrado e informes
+                eficientes.
               </li>
               <li>
-                Added a <code>backup-db</code> command to create timestamped
-                copies of the SQLite database for safe archiving
+                Garantía de operaciones idempotentes para entidades críticas
+                (por ejemplo, evitando números de factura duplicados en la
+                creación).
               </li>
               <li>
-                Implemented PDF import hooks for invoices, laying the groundwork
-                for automating data entry from scanned documents
+                Gestión de una base de datos SQLite ligera, inicializada mediante
+                un único comando <code>conta init</code>.
+              </li>
+            </ul>
+
+            <h2>Exportaciones, copias de seguridad y extensibilidad</h2>
+            <ul>
+              <li>
+                Exportación a CSV de los libros oficiales de IVA utilizando
+                pandas, generando ficheros separados de facturas emitidas y
+                recibidas por trimestre.
               </li>
               <li>
-                Structured the project with FastAPI and Uvicorn dependencies to
-                allow a future evolution from pure CLI to a small web dashboard
-                without changing the core domain layer
+                Añadido un comando <code>backup-db</code> para crear copias con
+                marca temporal de la base de datos SQLite para archivado seguro.
+              </li>
+              <li>
+                Implementación de hooks de importación de PDFs de facturas,
+                sentando las bases para automatizar la entrada de datos desde
+                documentos escaneados.
+              </li>
+              <li>
+                Estructuración del proyecto con dependencias de FastAPI y
+                Uvicorn para permitir una futura evolución desde una CLI pura a
+                un pequeño panel web sin cambiar la capa de dominio.
               </li>
             </ul>
 
             <div class="project-slideshow" data-slideshow>
-              <h2 class="slideshow-header">Project Gallery</h2>
+              <h2 class="slideshow-header">Galería del proyecto</h2>
               <button
                 class="slide-nav prev"
                 type="button"
-                aria-label="Previous image"
+                aria-label="Imagen anterior"
               >
                 ‹
               </button>
@@ -184,49 +195,49 @@
                 <figure class="slide is-active">
                   <img
                     src="/assets/projects/conta/conta-01.webp"
-                    alt="Conta list of command"
+                    alt="Conta lista de comandos"
                   />
-                  <figcaption>List of commands</figcaption>
+                  <figcaption>Lista de comandos</figcaption>
                 </figure>
 
                    <figure class="slide is-active">
                   <img
                     src="/assets/projects/conta/conta-02.webp"
-                    alt="Conta command usage for issuing an invoice"
+                    alt="Uso del comando de Conta para emitir una factura"
                   />
-                  <figcaption>Command usage for issuing an invoice</figcaption>
+                  <figcaption>Uso del comando para emitir una factura</figcaption>
                 </figure>
 
                    <figure class="slide is-active">
                   <img
                     src="/assets/projects/conta/conta-03.webp"
-                    alt="Conta command usage for recording an expense"
+                    alt="Uso del comando de Conta para registrar un gasto"
                   />
-                  <figcaption>Command usage for recording an expense</figcaption>
+                  <figcaption>Uso del comando para registrar un gasto</figcaption>
                 </figure>
 
                    <figure class="slide is-active">
                   <img
                     src="/assets/projects/conta/conta-04.webp"
-                    alt="Conta list of issued invoices for a given quarter"
+                    alt="Lista de facturas emitidas en un trimestre en Conta"
                   />
-                  <figcaption>List of issued invoices for a given quarter</figcaption>
+                  <figcaption>Listado de facturas emitidas en un trimestre</figcaption>
                 </figure>
 
                    <figure class="slide is-active">
                   <img
                     src="/assets/projects/conta/conta-05.webp"
-                    alt="Conta list of expenses for a given quarter"
+                    alt="Lista de gastos de un trimestre en Conta"
                   />
-                  <figcaption>List of expenses for a given quarter</figcaption>
+                  <figcaption>Listado de gastos de un trimestre</figcaption>
                 </figure>
 
                    <figure class="slide is-active">
                   <img
                     src="/assets/projects/conta/conta-06.webp"
-                    alt="Conta Spanish tax report forms for a given quarter"
+                    alt="Formularios de declaración de impuestos trimestrales en Conta"
                   />
-                  <figcaption>Spanish tax report forms for a given quarter</figcaption>
+                  <figcaption>Formularios de declaración de impuestos trimestrales</figcaption>
                 </figure>
 
               </div>
@@ -234,7 +245,7 @@
               <button
                 class="slide-nav next"
                 type="button"
-                aria-label="Next image"
+                aria-label="Siguiente imagen"
               >
                 ›
               </button>
@@ -243,13 +254,13 @@
 
            <div class="project-nav">
               <p class="to-previous-project">
-                <a class="project-link" href="extended-bandoneon.html">&lArr; Previous project</a>
+                <a class="project-link" href="extended-bandoneon.html">&lArr; Proyecto anterior</a>
               </p>
               <p class="back-to-projects">
-                <a class="project-link" href="../projects.html">Back to projects list</a>
+                <a class="project-link" href="../projects.html">Volver a la lista de proyectos</a>
               </p>
               <p class="to-next-project">
-                <a class="project-link" href="bcn-activa-ita-challenges.html">Next project &rArr;</a>
+                <a class="project-link" href="bcn-activa-ita-challenges.html">Siguiente proyecto &rArr;</a>
               </p>
             </div>
 
@@ -260,10 +271,7 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>
-          &copy; <span id="year"></span> Manuel Krapovickas. All rights
-          reserved.
-        </p>
+        <p data-i18n="footer.copyright"></p>
         <ul class="footer-links">
           <li>
             <a
