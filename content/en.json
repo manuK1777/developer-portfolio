@@ -9,7 +9,7 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Hi, I’m Manuel Krapovickas",
+    "title": "Hi, I'm Manuel Krapovickas",
     "subtitle": "Frontend-focused Full-Stack Software Developer.",
     "primaryCta": "View Projects",
     "secondaryCta": "Get in Touch"
@@ -36,7 +36,7 @@
     "caseStudyHeading": "Case Study",
     "caseStudyBody": "Designing a Soundbank Pipeline for an Online Bandoneon Library.",
     "caseStudyCta": "Read case study",
-    "collabHeading": "Let’s Collaborate",
+    "collabHeading": "Let's Collaborate",
     "collabBody": "Interested in working together on a product, internal tool, or creative web project? I’m available for collaboration.",
     "collabCta": "Contact me"
   },

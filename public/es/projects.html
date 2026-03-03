@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects - Web Dev Portfolio</title>
+  <title>Proyectos - Portfolio de Desarrollo Web</title>
   <link rel="stylesheet" href="/css/main.css" />
 </head>
 <body>
@@ -19,10 +19,18 @@
       </button>
       <nav class="site-nav" aria-label="Main">
         <ul>
-          <li><a href="index.html">Home / About</a></li>
-          <li><a href="projects.html" class="active">Projects</a></li>
-          <li><a href="case-studies.html">Case Studies</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="index.html" data-i18n="nav.home">Inicio / Sobre mí</a>
+          </li>
+          <li>
+            <a href="projects.html" class="active" data-i18n="nav.projects">Proyectos</a>
+          </li>
+          <li>
+            <a href="case-studies.html" data-i18n="nav.caseStudies">Casos de estudio</a>
+          </li>
+          <li>
+            <a href="contact.html" data-i18n="nav.contact">Contacto</a>
+          </li>
           <li class="lang-toggle">
             <button type="button" class="lang-link" data-lang="en">EN</button>
             |
@@ -36,51 +44,68 @@
   <main class="site-main">
     <section class="section">
       <div class="container">
-        <header class="section-header-projects">
-          <h1>Projects</h1>
+        <header class="section-header">
+          <h1>Proyectos</h1>
         </header>
 
         <div class="filters" aria-label="Project filters">
-          <button class="filter-btn is-active" data-filter="all">All</button>
+          <button class="filter-btn is-active" data-filter="all">Todos</button>
           <button class="filter-btn" data-filter="frontend">Front-end</button>
           <button class="filter-btn" data-filter="fullstack">Full-stack</button>
           <button class="filter-btn" data-filter="ui">UI / UX</button>
         </div>
 
         <div class="grid three-cols cards-list" id="projects-list">
-          <article class="card" data-tags="frontend ui">
-            <h2>Marketing Landing Page</h2>
-            <p>Responsive landing page built with semantic HTML5, modern CSS, and vanilla JS animations.</p>
-            <p class="meta">Role: Front-end | Stack: HTML, CSS, JS</p>
-            <a href="#" class="card-link">View live</a>
+          <article class="card card-projects" data-tags="frontend, fullstack, ui">
+            <h2>JPL Media - Positive Duty</h2>
+            <p>
+              Plataforma web que ofrece formación en cumplimiento normativo bajo
+              la ley australiana Respect at Work.
+            </p>
+            <p class="meta">
+              Rol: desarrollador full-stack con foco en frontend. Diseño UI/UX
+              | Stack: Next.js, React, TypeScript, JavaScript, Tailwind CSS.
+            </p>
+            <a href="project-details/positive-duty.html" class="card-link">Ver detalles</a>
           </article>
 
-          <article class="card" data-tags="fullstack">
-            <h2>Portfolio CMS</h2>
-            <p>Custom portfolio management dashboard with project CRUD, image uploads, and tagging.</p>
-            <p class="meta">Role: Full-stack | Stack: Node, Express, MongoDB</p>
-            <a href="#" class="card-link">View repo</a>
+          <article class="card card-projects" data-tags="frontend, fullstack, ui">
+            <h2>Extended Bandoneon</h2>
+            <p>
+              Aplicación web multimedia para explorar técnicas extendidas del
+              bandoneón.
+            </p>
+            <p class="meta">
+              Rol: full-stack. Diseño UI/UX | Stack: Next.js, React, TypeScript,
+              Tailwind CSS, MySQL, Vercel, Railway.
+            </p>
+            <a href="project-details/extended-bandoneon.html" class="card-link">Ver detalles</a>
           </article>
 
-          <article class="card" data-tags="frontend ui">
-            <h2>Design System</h2>
-            <p>Component library and style guide for a product team, implemented in reusable UI patterns.</p>
-            <p class="meta">Role: Front-end | Stack: HTML, CSS, JS</p>
-            <a href="#" class="card-link">Case study</a>
+          <article class="card card-projects" data-tags="fullstack">
+            <h2>Conta — Herramienta de Automatización Contable y Fiscal</h2>
+            <p>
+              Sistema de contabilidad basado en línea de comandos diseñado para
+              trabajadores autónomos en España.
+            </p>
+            <p class="meta">
+              Rol: full-stack, lógica de negocio, modelado de datos, UX de CLI |
+              Stack: Python, SQLModel, SQLite, Typer, Pydantic, Rich.
+            </p>
+            <a href="project-details/conta.html" class="card-link">Ver detalles</a>
           </article>
 
-          <article class="card" data-tags="frontend">
-            <h2>Interactive Dashboard</h2>
-            <p>Data visualization dashboard with charts, filters, and accessible keyboard interactions.</p>
-            <p class="meta">Role: Front-end | Stack: JS, Charting library</p>
-            <a href="#" class="card-link">View live</a>
-          </article>
-
-          <article class="card" data-tags="fullstack ui">
-            <h2>Client Portal</h2>
-            <p>Secure portal for clients to review assets, timelines, and invoices.</p>
-            <p class="meta">Role: Full-stack | Stack: Your preferred stack</p>
-            <a href="#" class="card-link">View repo</a>
+          <article class="card card-projects" data-tags="frontend, ui">
+            <h2>Barcelona Activa IT Academy Challenges</h2>
+            <p>
+              Plataforma con ejercicios de programación y recursos. Incluye
+              interfaces tanto para usuarios como para mentores.
+            </p>
+            <p class="meta">
+              Rol: front-end | Stack: Angular, TypeScript, JavaScript, HTML5,
+              CSS3, Bootstrap, Jest.
+            </p>
+            <a href="project-details/bcn-activa-ita-challenges.html" class="card-link">Ver detalles</a>
           </article>
         </div>
       </div>
@@ -89,7 +114,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Manuel Krapovickas. All rights reserved.</p>
+      <p data-i18n="footer.copyright"></p>
       <ul class="footer-links">
         <li><a href="https://github.com/manuK1777"
             target="_blank"
