@@ -96,6 +96,9 @@
               pueden generarse bajo demanda. Esto reduce errores de cálculo manual, acorta el tiempo que dedico a preparar modelos
               fiscales y me ofrece una visión más clara de mi situación financiera a lo largo del año.
             </p>
+            <p>
+              <a class="project-link" href="project-details/conta.html">Ir a página del proyecto</a>
+            </p>
           </section>
         </article>
 
@@ -104,12 +107,12 @@
         <article class="case-study" id="case-study-positive-duty">
           <header>
             <h2 class="subheader">Automatizando revisiones anuales de formación en una plataforma de cumplimiento (Positive Duty)</h2>
-            <p class="meta">Rol: desarrollador full‑stack y de plataforma | Duración: proyecto en curso</p>
+            <p class="meta">Rol: desarrollador full-stack y de plataforma | Duración: proyecto en curso</p>
           </header>
           <section>
             <h3>Contexto</h3>
             <p>
-              Positive Duty es una plataforma de formación en cumplimiento multi‑tenant creada para dar soporte a la legislación
+              Positive Duty es una plataforma de formación en cumplimiento multi-tenant creada para dar soporte a la legislación
               australiana Respect at Work. Los clientes necesitan que las personas empleadas repitan periódicamente módulos de
               formación clave para mantenerse al día, pero los flujos anteriores se basaban en exportes manuales y hojas de cálculo,
               lo que facilitaba que se pasaran por alto revisiones vencidas a medida que crecía el número de tenants y usuarios.
@@ -129,13 +132,13 @@
             <h3>Solución</h3>
             <p>
               Implementé un motor de revisiones anuales que escanea a diario las finalizaciones de módulos, calcula quién debe revisar
-              formación y entrega recordatorios por correo y notificaciones in‑product, con salvaguardas de idempotencia y visibilidad
+              formación y entrega recordatorios por correo y notificaciones in-product, con salvaguardas de idempotencia y visibilidad
               operativa.
             </p>
             <ul>
               <li>
                 Extensión del esquema de Prisma con modelos <code>ReminderDispatch</code> y <code>UINotification</code>
-                para registrar qué recordatorios se han enviado y persistir notificaciones in‑app por persona usuaria y módulo.
+                para registrar qué recordatorios se han enviado y persistir notificaciones in-app por persona usuaria y módulo.
               </li>
               <li>
                 Construcción de un escáner diario en <code>anniversaryReminder.js</code> que agrega la última finalización por
@@ -171,6 +174,9 @@
               revisar su formación reciben recordatorios a tiempo, mientras que administradores y stakeholders pueden diagnosticar
               el comportamiento a través de herramientas internas y registros persistidos de recordatorios. Esto reduce la carga
               operativa y ayuda a los tenants de Positive Duty a mantener el cumplimiento formativo a escala.
+            </p>
+            <p>
+              <a class="project-link" href="project-details/positive-duty.html">Ir a página del proyecto</a>
             </p>
           </section>
         </article>
@@ -248,6 +254,9 @@
               código, mientras que las personas visitantes obtienen reproducción rápida con waveforms, filtros útiles y
               descargas controladas. Esto hace que el proyecto Extended Bandoneon sea más útil para intérpretes, productores e
               investigadores y proporciona una base sólida para futuras herramientas como datasets o utilidades de análisis.
+            </p>
+            <p>
+              <a class="project-link" href="project-details/extended-bandoneon.html">Ir a página del proyecto</a>
             </p>
           </section>
         </article>
