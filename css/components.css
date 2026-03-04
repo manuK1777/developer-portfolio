@@ -54,7 +54,7 @@
   padding: 0.25rem 0.7rem;
   border-radius: 999px;
   background: rgba(15, 23, 42, 0.75);
-  border: 1px solid rgba(171, 190, 218, 0.5);
+  /* border: 1px solid rgba(171, 190, 218, 0.5); */
   color: #7e8db0;
 }
 
@@ -150,13 +150,20 @@
 
 /* Project detail external links */
 .project-link {
-  color: #62d9ff;
+  color: #60a5fa;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  text-decoration: none;
+  transition: color 0.16s ease, text-shadow 0.16s ease;
 }
 
 .project-link:hover,
 .project-link:focus-visible {
-  color: #02c0ff;
-  text-decoration: underline;
+  color: #93c5fd;
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(96, 165, 250, 0.85);
 }
 
 .project-slideshow {
