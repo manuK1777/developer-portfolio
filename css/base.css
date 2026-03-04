@@ -52,6 +52,11 @@ main {
   background: radial-gradient(circle at top, #1d293b, #020617);
 }
 
+#highlight-projects-heading {
+  color: #e5e7eb;
+  margin-bottom: 1.5rem;
+  }
+
 .section-header {
   margin-bottom: 0.5rem;
 }
@@ -59,6 +64,11 @@ main {
 .section-header h1,
 .section-header h2 {
   margin: 0 0 0.5rem;
+}
+
+.section-header h2,
+.skills-heading h3 {
+  color: #60a5fa;;
 }
 
 .subheader {
