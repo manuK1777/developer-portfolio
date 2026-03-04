@@ -123,4 +123,36 @@
       }
     });
   });
+
+  // Make contact channel cards behave as full card links
+  const contactCards = document.querySelectorAll(
+    ".contact-channels .card.channel-card"
+  );
+
+  contactCards.forEach((card) => {
+    // Click anywhere on the card (except direct links) to follow the main link
+    card.addEventListener("click", (event) => {
+      if (event.target.closest("a")) return;
+
+      const link = card.querySelector(".card-link");
+      if (!link) return;
+
+      link.click();
+    });
+
+    // Keyboard accessibility: Enter/Space activate the card
+    if (!card.hasAttribute("tabindex")) {
+      card.setAttribute("tabindex", "0");
+    }
+
+    card.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+
+      event.preventDefault();
+      const link = card.querySelector(".card-link");
+      if (link) {
+        link.click();
+      }
+    });
+  });
 })();

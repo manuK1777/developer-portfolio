@@ -90,6 +90,8 @@
 
 .card-projects,
 .card {
+  display: flex;
+  flex-direction: column;
   border-radius: 1rem;
   padding: 1.25rem 1.2rem 1.35rem;
   background: rgba(15, 23, 42, 0.9);
@@ -116,13 +118,14 @@
 
 .card-projects .meta,
 .card .meta {
-  font-size: 0.85rem;
+  font-size: 0.80rem;
+  font-style: italic;
   color: #9ca3af;
 }
 
 .card-projects .card-link,
 .card .card-link {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: #60a5fa;
 }
@@ -435,14 +438,17 @@
   color: #60a5fa;
 }
 
+/* Generic card text utilities */
+.card-title,
 .channel-title {
-  font-size: 1.05rem;
+  font-size: 1.10rem;
   font-weight: 600;
   color: #e5e7eb;
   margin: 0;
   word-break: break-all;
 }
 
+.card-desc,
 .channel-desc {
   font-size: 0.85rem;
   color: #7e8db0;
@@ -450,16 +456,25 @@
   line-height: 1.5;
 }
 
+.card-action,
 .channel-action {
-  margin-top: auto;
-  padding-top: 0.75rem;
   font-size: 0.8rem;
   color: #60a5fa;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.35rem;
 }
 
+/* Layout tweaks for card actions */
+.channel-card .card-action,
+.channel-card .channel-action,
+.card-projects .card-action,
+.card .card-action {
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
+.card-action svg,
 .channel-action svg {
   width: 0.85rem;
   height: 0.85rem;
