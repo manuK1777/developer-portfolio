@@ -121,14 +121,14 @@
 
         <article class="case-study" id="case-study-extended-bandoneon">
           <header>
-            <h2 class="subheader">Diseñando un flujo de soundbank para una biblioteca online de bandoneón (Extended Bandoneon)</h2>
-            <p class="meta">Rol: desarrollador full‑stack | Duración: proyecto en curso</p>
+            <h2 class="subheader">Construyendo el flujo de un banco de sonidos para una biblioteca de bandoneón online (Extended Bandoneon)</h2>
+            <p class="meta">Rol: desarrollador full-stack | Duración: proyecto en curso</p>
           </header>
           <section>
             <h3>Contexto</h3>
             <p>
               Extended Bandoneon es un proyecto de investigación e interpretación en torno al instrumento bandoneón. Uno de los
-              objetivos clave de la aplicación web es publicar un soundbank online curado con muestras de bandoneón de alta calidad
+              objetivos clave de la aplicación web es publicar un banco de sonidos online curado con muestras de bandoneón de alta calidad
               que intérpretes, productores e investigadores puedan explorar, previsualizar y descargar.
             </p>
           </section>
@@ -138,14 +138,14 @@
               <li>Modelar sonidos y soundpacks entre MySQL y Cloudinary manteniendo el metadato sincronizado.</li>
               <li>Soportar subidas en WAV por calidad sirviendo al mismo tiempo archivos MP3 eficientes a las personas usuarias.</li>
               <li>Diseñar un sistema de etiquetado y filtrado que funcione tanto para sonidos como para soundpacks.</li>
-              <li>Construir una UI de soundbank responsiva con reproducción mediante waveforms que escale con muchos sonidos.</li>
-              <li>Hacer que el soundbank sea fácilmente descubrible con datos estructurados sin duplicar lógica de negocio.</li>
+              <li>Construir una UI del banco de sonidos responsiva con reproducción mediante waveforms que escale con muchos sonidos.</li>
+              <li>Hacer que el banco de sonidos sea fácilmente descubrible con datos estructurados sin duplicar lógica de negocio.</li>
             </ul>
           </section>
           <section>
             <h3>Solución</h3>
             <p>
-              Implementé un flujo de soundbank de extremo a extremo que ingiere audio en Cloudinary, normaliza el metadato en MySQL
+              Implementé un flujo de banco de sonidos de extremo a extremo que ingiere audio en Cloudinary, normaliza el metadato en MySQL
               y expone una biblioteca de sonidos filtrable, optimizada para SEO, con reproducción mediante waveforms y descargas
               controladas.
             </p>
@@ -168,15 +168,15 @@
               <li>
                 Exposición de un endpoint público <code>/api/sounds</code> que realiza paginación basada en cursores, une
                 soundpacks y etiquetas, filtra los activos MP3 del soundbank y devuelve una forma amigable para el cliente de
-                React Query en la página de soundbank.
+                React Query en la página de banco de sonidos.
               </li>
               <li>
-                Construcción del frontend del soundbank con scroll infinito, filtros por soundpack y etiquetas, y un componente
+                Construcción del frontend del banco de sonidos con scroll infinito, filtros por soundpack y etiquetas, y un componente
                 <code>SoundPlayer</code> personalizado usando WaveSurfer.js para renderizar formas de onda y controlar la
                 reproducción sin depender de los controles nativos del navegador.
               </li>
               <li>
-                Añadidos datos estructurados JSON‑LD para el soundbank mediante un helper
+                Añadidos datos estructurados JSON-LD para el soundbank mediante un helper
                 <code>generateSoundbankStructuredData</code> para que los motores de búsqueda puedan indexar la colección como un
                 conjunto de recursos <code>AudioObject</code>.
               </li>
@@ -185,9 +185,9 @@
           <section>
             <h3>Impacto</h3>
             <p>
-              El flujo de soundbank transformó una colección estática de archivos de audio en una biblioteca estructurada y
-              explorable. Las personas editoras pueden subir nuevos sonidos de bandoneón y organizarlos en soundpacks sin tocar
-              código, mientras que las personas visitantes obtienen reproducción rápida con waveforms, filtros útiles y
+              El flujo de banco de sonidos transformó una colección estática de archivos de audio en una biblioteca estructurada y
+              explorable. Los administradores pueden subir nuevos sonidos de bandoneón y organizarlos en soundpacks sin tocar
+              código, mientras que los usuarios obtienen reproducción rápida con waveforms, filtros útiles y
               descargas controladas. Esto hace que el proyecto Extended Bandoneon sea más útil para intérpretes, productores e
               investigadores y proporciona una base sólida para futuras herramientas como datasets o utilidades de análisis.
             </p>
