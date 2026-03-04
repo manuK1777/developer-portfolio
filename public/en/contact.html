@@ -5,6 +5,177 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact - Web Dev Portfolio</title>
   <link rel="stylesheet" href="/css/main.css" />
+  <style>
+    /* ── Contact page extras ───────────────────────── */
+
+    .contact-hero {
+      padding: 4rem 0 3rem;
+    }
+
+    .contact-hero h1 {
+      font-size: clamp(2rem, 3vw + 1rem, 2.75rem);
+      color: #e5e7eb;
+      margin: 0 0 0.75rem;
+    }
+
+    .contact-hero .lead {
+      max-width: 48ch;
+      margin: 0;
+      color: #7e8db0;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* Channel cards grid */
+    .contact-channels {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+      margin: 3rem 0;
+    }
+
+    .channel-card {
+      border-radius: 1.1rem;
+      padding: 1.75rem 1.5rem;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition: border-color 0.18s ease, transform 0.15s ease, box-shadow 0.18s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .channel-card:hover,
+    .channel-card:focus-visible {
+      border-color: #60a5fa;
+      transform: translateY(-3px);
+      box-shadow: 0 20px 48px rgba(37, 99, 235, 0.18);
+      text-decoration: none;
+    }
+
+    .channel-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 0.6rem;
+      background: rgba(37, 99, 235, 0.15);
+      border: 1px solid rgba(96, 165, 250, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.4rem;
+    }
+
+    .channel-icon svg {
+      width: 1.2rem;
+      height: 1.2rem;
+      stroke: #60a5fa;
+      fill: none;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .channel-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #60a5fa;
+    }
+
+    .channel-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #e5e7eb;
+      margin: 0;
+      word-break: break-all;
+    }
+
+    .channel-desc {
+      font-size: 0.85rem;
+      color: #7e8db0;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .channel-action {
+      margin-top: auto;
+      padding-top: 0.75rem;
+      font-size: 0.8rem;
+      color: #60a5fa;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .channel-action svg {
+      width: 0.85rem;
+      height: 0.85rem;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: transform 0.15s ease;
+    }
+
+    .channel-card:hover .channel-action svg {
+      transform: translateX(3px);
+    }
+
+    /* Availability strip */
+    .availability-strip {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.1rem 1.5rem;
+      background: rgba(16, 185, 129, 0.07);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: 0.85rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .avail-dot {
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+      flex-shrink: 0;
+      animation: pulse-dot 2.4s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2); }
+      50%       { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.08); }
+    }
+
+    .avail-text {
+      font-size: 0.9rem;
+      color: #a7f3d0;
+      margin: 0;
+    }
+
+    .avail-text strong {
+      color: #d1fae5;
+    }
+
+    /* Responsive */
+    @media (min-width: 481px) and (max-width: 768px) {
+      .contact-channels {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-channels {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -34,50 +205,87 @@
   </header>
 
   <main class="site-main">
-    <section class="section">
+    <section class="section contact-hero">
       <div class="container">
         <header class="section-header">
-          <h1>Contact</h1>
-          <p>Use the form below or reach out directly via email and social links.</p>
+          <h1>Let's work together</h1>
         </header>
+        <p class="lead">
+          I'm open to freelance projects, full-time roles, and collaborations on 
+          products, internal tools, or creative web projects. Pick the channel 
+          that works best for you.
+        </p>
+      </div>
+    </section>
 
-        <div class="grid two-cols contact-layout">
-          <div>
-            <form class="contact-form" id="contact-form" novalidate>
-              <div class="form-field">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required />
-                <p class="field-error" data-for="name"></p>
-              </div>
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
 
-              <div class="form-field">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required />
-                <p class="field-error" data-for="email"></p>
-              </div>
+        <!-- Availability indicator -->
+        <div class="availability-strip">
+          <span class="avail-dot" aria-hidden="true"></span>
+          <p class="avail-text">
+            <strong>Currently available</strong> for new projects &mdash; based in 
+            Barcelona &middot; Open to remote work worldwide
+          </p>
+        </div>
 
-              <div class="form-field">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <p class="field-error" data-for="message"></p>
-              </div>
+        <!-- Contact channel cards -->
+        <div class="contact-channels">
 
-              <button type="submit" class="btn primary">Send Message</button>
-              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-            </form>
-          </div>
+          <!-- Email -->
+          <a class="channel-card" href="mailto:your@email.com">
+            <div class="channel-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <polyline points="2,4 12,13 22,4"/>
+              </svg>
+            </div>
+            <span class="channel-label">Email</span>
+            <p class="channel-title">your@email.com</p>
+            <p class="channel-desc">Best for project enquiries, proposals, and detailed questions.</p>
+            <span class="channel-action">
+              Send an email
+              <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+            </span>
+          </a>
 
-          <div>
-            <h2>Other Ways to Reach Me</h2>
-            <p>
-              Replace this text with your preferred contact details: email address, location, and
-              availability.
-            </p>
-            <ul class="contact-details">
-              <li><strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a></li>
-              <li><strong>Location:</strong> Your City, Country</li>
-            </ul>
-          </div>
+          <!-- LinkedIn -->
+          <a class="channel-card" href="https://www.linkedin.com/in/manuel-krapovickas/" target="_blank" rel="noopener noreferrer">
+            <div class="channel-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="3"/>
+                <line x1="8" y1="11" x2="8" y2="17"/>
+                <line x1="8" y1="7" x2="8" y2="8"/>
+                <path d="M12 17v-4a2 2 0 0 1 4 0v4"/>
+                <line x1="12" y1="11" x2="12" y2="17"/>
+              </svg>
+            </div>
+            <span class="channel-label">LinkedIn</span>
+            <p class="channel-title">manuel-krapovickas</p>
+            <p class="channel-desc">Connect professionally, follow my work, or send a message.</p>
+            <span class="channel-action">
+              View profile
+              <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+            </span>
+          </a>
+
+          <!-- GitHub -->
+          <a class="channel-card" href="https://github.com/manuK1777" target="_blank" rel="noopener noreferrer">
+            <div class="channel-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+            </div>
+            <span class="channel-label">GitHub</span>
+            <p class="channel-title">manuK1777</p>
+            <p class="channel-desc">Browse my open-source work and code samples.</p>
+            <span class="channel-action">
+              View repositories
+              <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+            </span>
+          </a>
+
         </div>
       </div>
     </section>
@@ -87,19 +295,12 @@
     <div class="container footer-inner">
       <p>&copy; <span id="year"></span> Manuel Krapovickas. All rights reserved.</p>
       <ul class="footer-links">
-        <li><a href="https://github.com/manuK1777"
-            target="_blank"
-            rel="noopener noreferrer"
-            >GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/manuel-krapovickas/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >LinkedIn</a></li>
+        <li><a href="https://github.com/manuK1777" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/manuel-krapovickas/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
       </ul>
     </div>
   </footer>
 
   <script src="/js/main.js"></script>
-  <script src="/js/contact.js"></script>
 </body>
 </html>
