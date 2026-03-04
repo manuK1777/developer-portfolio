@@ -305,7 +305,7 @@
 }
 
 /* Contact components */
-.contact-form {
+/* .contact-form {
   background: rgba(15, 23, 42, 0.9);
   border-radius: 1rem;
   padding: 1.5rem 1.25rem;
@@ -363,4 +363,168 @@
 
 .contact-details li + li {
   margin-top: 0.35rem;
+} */
+
+/* Contact hero & channels (EN contact page) */
+.contact-hero {
+  padding: 4rem 0 3rem;
+}
+
+.contact-hero h1 {
+  font-size: clamp(2rem, 3vw + 1rem, 2.75rem);
+  color: #e5e7eb;
+  margin: 0 0 0.75rem;
+}
+
+.contact-hero .lead {
+  max-width: 48ch;
+  margin: 0;
+  color: #7e8db0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.contact-channels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 3rem 0;
+}
+
+/* Channel card: build on top of generic .card styles */
+.channel-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.channel-card:hover,
+.channel-card:focus-visible {
+  text-decoration: none;
+}
+
+.channel-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.6rem;
+  background: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.4rem;
+}
+
+.channel-icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  stroke: #60a5fa;
+  fill: none;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.channel-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #60a5fa;
+}
+
+.channel-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #e5e7eb;
+  margin: 0;
+  word-break: break-all;
+}
+
+.channel-desc {
+  font-size: 0.85rem;
+  color: #7e8db0;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.channel-action {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  font-size: 0.8rem;
+  color: #60a5fa;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.channel-action svg {
+  width: 0.85rem;
+  height: 0.85rem;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.15s ease;
+}
+
+.channel-card:hover .channel-action svg {
+  transform: translateX(3px);
+}
+
+/* Availability strip */
+.availability-strip {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.5rem;
+  background: rgba(16, 185, 129, 0.07);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 0.85rem;
+  margin-bottom: 3.5rem;
+}
+
+.avail-dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  flex-shrink: 0;
+  animation: pulse-dot 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.08);
+  }
+}
+
+.avail-text {
+  font-size: 0.9rem;
+  color: #a7f3d0;
+  margin: 0;
+}
+
+.avail-text strong {
+  color: #d1fae5;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .contact-channels {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-channels {
+    grid-template-columns: 1fr;
+  }
 }
