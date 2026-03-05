@@ -3,12 +3,5 @@
   "outputDirectory": ".",
   "framework": null,
   "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    { "source": "/en", "destination": "/public/en/index.html" },
-    { "source": "/en/:path*", "destination": "/public/en/:path*" },
-    { "source": "/es", "destination": "/public/es/index.html" },
-    { "source": "/es/:path*", "destination": "/public/es/:path*" },
-    { "source": "/", "destination": "/public/en/index.html" }
-  ]
+  "trailingSlash": false
 }
