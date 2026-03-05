@@ -9,16 +9,16 @@
     "contact": "Contacto"
   },
   "hero": {
-    "title": "Hola, soy Manuel Krapovickas",
+    "title": "Manuel Krapovickas",
     "subtitle": "Desarrollador Full-Stack con foco en Frontend.",
     "primaryCta": "Ver proyectos",
     "secondaryCta": "Contactar"
   },
   "about": {
     "heading": "Sobre mí",
-    "intro": "Soy un desarrollador de software full-stack con foco en frontend, especializado en la creación de productos SaaS orientados a UI/UX, plataformas internas y herramientas creativas utilizando tecnologías web modernas.",
+    "intro": "Soy desarrollador de software full-stack con foco en frontend, especializado en la creación de productos SaaS orientados a UI/UX, plataformas internas y herramientas creativas utilizando tecnologías web modernas.",
     "body": "Aplico un enfoque disciplinado y orientado al detalle, con un fuerte énfasis en la colaboración y la mejora continua. Disfruto especialmente trabajar en interfaces complejas, herramientas internas y productos donde las decisiones de diseño e ingeniería tienen un impacto directo en los usuarios reales.",
-    "coreSkillsHeading": "Habilidades clave",
+    "coreSkillsHeading": "Habilidades destacadas",
     "skills": [
       "Ingeniería Frontend moderna (JavaScript, TypeScript, React, Next.js, Angular, Node.js)",
       "Arquitectura de UI y sistemas de diseño",
