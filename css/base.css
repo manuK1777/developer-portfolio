@@ -84,3 +84,9 @@ main {
   margin: 0 0 1.5rem;
   color: #cbd5f5;
 }
+
+@media (max-width: 768px) {
+  .section.highlight {
+    margin-top: 2.25rem;
+  }
+}

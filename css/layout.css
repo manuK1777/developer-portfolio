@@ -213,8 +213,8 @@ html[lang="es"] .lang-link[data-lang="es"] {
 }
 
 /* About section skills column */
-.skills-section {
-  margin-top: 5rem;
+.sub-section-skills {
+  margin-top: 2rem;
 }
 
 /* Project detail navigation (previous / back / next) */
@@ -273,11 +273,28 @@ html[lang="es"] .lang-link[data-lang="es"] {
   }
 
   .hero-avatar {
-    margin: 1.5rem 0 0;
+    margin: 1.5rem auto 0;
+  }
+
+  /* Tighten vertical rhythm between hero, about, and highlight */
+  .hero {
+    padding-bottom: 3rem;
+  }
+
+  .section {
+    padding: 2.5rem 0 1.75rem;
   }
 
   .grid.three-cols {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+   .grid.two-cols {
+    grid-template-columns: minmax(0, 1fr);
+  }
+ 
+  .sub-section-skills {
+    margin-top: 1rem;
   }
 }
 
