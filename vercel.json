@@ -3,7 +3,7 @@
   "outputDirectory": ".",
   "framework": null,
   "cleanUrls": true,
-  "trailingSlash": false,
+  "trailingSlash": true,
   "redirects": [
     { "source": "/", "destination": "/en/", "permanent": false }
   ]
