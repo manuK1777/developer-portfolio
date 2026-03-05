@@ -1,0 +1,237 @@
+
+
+/* ── 1. KEYFRAMES ──────────────────────────────────── */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes hero-line {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── 2. HERO PAGE-LOAD STAGGER ─────────────────────── */
+/*
+  Targets the home page hero text block.
+  Each child staggers in on load.
+*/
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-text > * {
+    opacity: 0;
+    animation: hero-line 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .hero-text > *:nth-child(1) { animation-delay: 0.05s; }
+  .hero-text > *:nth-child(2) { animation-delay: 0.18s; }
+  .hero-text > *:nth-child(3) { animation-delay: 0.32s; }
+
+  /* Avatar fades in slightly after the text */
+  .hero-media {
+    opacity: 0;
+    animation: fade-in 0.7s ease 0.4s forwards;
+  }
+}
+
+/* ── 3. SCROLL REVEAL ──────────────────────────────── */
+/*
+  .reveal is added by animations.js via IntersectionObserver.
+  .reveal.is-visible triggers the animation.
+  Stagger delay is set inline by JS as --reveal-delay.
+*/
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity  0.55s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0s);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── 4. CARD GLOW ON HOVER ─────────────────────────── */
+/*
+  Enhances the existing translateY(-3px) on .card-projects
+  with a blue glow. Uses a layered box-shadow approach so
+  it composites on top of the existing shadow without
+  replacing it.
+*/
+
+@media (prefers-reduced-motion: no-preference) {
+  .card-projects,
+  .card {
+    transition:
+      background    0.2s ease,
+      border-color  0.2s ease,
+      transform     0.2s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow    0.2s ease;
+  }
+}
+
+.card-projects:hover,
+.card-projects:focus-within {
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.9),
+    0 0 0 1px rgba(96, 165, 250, 0.35),
+    0 0 28px 4px rgba(37, 99, 235, 0.18);
+}
+
+/* ── 5. NAV LINK UNDERLINE SLIDE-IN ────────────────── */
+/*
+  Replaces the instant border-bottom appearance with a
+  smooth left-to-right reveal using a pseudo-element.
+  The existing border-bottom on .site-nav a is kept for
+  the .active state; we only animate the hover state.
+*/
+
+@media (prefers-reduced-motion: no-preference) {
+  .site-nav a:not(.active) {
+    position: relative;
+    border-bottom: 2px solid transparent;
+  }
+
+  .site-nav a:not(.active)::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgba(96, 165, 250, 0.7);
+    transition: width 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+    border-radius: 999px;
+  }
+
+  .site-nav a:not(.active):hover::after,
+  .site-nav a:not(.active):focus-visible::after {
+    width: 100%;
+  }
+
+  /* Suppress the original instant border-bottom on hover
+     so only the pseudo-element shows */
+  .site-nav a:not(.active):hover,
+  .site-nav a:not(.active):focus-visible {
+    border-bottom-color: transparent;
+  }
+}
+
+/* ── 6. PROJECT & TEXT LINK GLOW ───────────────────── */
+/*
+  Adds a soft cyan text-shadow glow to .project-link
+  and .card-link on hover, matching the accent colours
+  already in use.
+*/
+
+@media (prefers-reduced-motion: no-preference) {
+  .project-link {
+    transition: color 0.18s ease, text-shadow 0.25s ease;
+  }
+
+  .project-link:hover,
+  .project-link:focus-visible {
+    text-shadow:
+      0 0 12px rgba(2, 192, 255, 0.55),
+      0 0 24px rgba(2, 192, 255, 0.2);
+  }
+
+  .card-link {
+    transition: color 0.18s ease, text-shadow 0.25s ease;
+  }
+
+  .card-projects .card-link:hover,
+  .card-projects .card-link:focus-visible,
+  .card .card-link:hover,
+  .card .card-link:focus-visible {
+    text-shadow:
+      0 0 10px rgba(96, 165, 250, 0.5),
+      0 0 20px rgba(96, 165, 250, 0.2);
+  }
+}
+
+/* ── 7. BUTTON GLOW ────────────────────────────────── */
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn.primary {
+    transition:
+      transform     0.15s ease,
+      box-shadow    0.2s ease;
+  }
+
+  .btn.primary:hover,
+  .btn.primary:focus-visible {
+    box-shadow:
+      0 18px 40px rgba(37, 99, 235, 0.45),
+      0 0 24px 4px rgba(56, 189, 248, 0.2);
+  }
+
+  .btn.secondary {
+    transition:
+      border-color  0.18s ease,
+      background    0.18s ease,
+      box-shadow    0.2s ease;
+  }
+
+  .btn.secondary:hover,
+  .btn.secondary:focus-visible {
+    box-shadow: 0 0 16px 2px rgba(96, 165, 250, 0.12);
+  }
+}
+
+/* ── 8. SECTION HEADER ACCENT LINE ────────────────── */
+/*
+  Animates a short accent underline growing beneath
+  section h1/h2 headings when they enter the viewport.
+  Added alongside .reveal via JS.
+*/
+
+@media (prefers-reduced-motion: no-preference) {
+  .section-header h1,
+  .section-header h2 {
+    position: relative;
+    display: inline-block;
+  }
+
+  .section-header h1::after,
+  .section-header h2::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(to right, #2563eb, #38bdf8);
+    border-radius: 999px;
+    transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.3s;
+  }
+
+  .section-header.is-visible h1::after,
+  .section-header.is-visible h2::after {
+    width: 2.5rem;
+  }
+}
