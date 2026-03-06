@@ -226,7 +226,8 @@
   justify-content: center;
   cursor: pointer;
   z-index: 2;
-  font-size: 1.4rem; /* make arrow icon larger without changing circle size */
+  font-size: 1.4rem;
+  line-height: 1;
 }
 
 .slide-nav.prev {
