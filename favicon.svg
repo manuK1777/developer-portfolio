@@ -4,9 +4,11 @@
     x="-14"
     y="28"
     fill="#ff1a1a"
+    stroke="#ff1a1a"
+  stroke-width="0.6"
     font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     font-size="23"
-    font-weight="700"
+    font-weight="900"
     transform="scale(-1,1)"
   >K</text>
 
@@ -15,8 +17,10 @@
     x="13"
     y="23"
     fill="#ff1a1a"
+    stroke="#ff1a1a"
+    stroke-width="0.6"
     font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     font-size="23"
-    font-weight="700"
+    font-weight="900"
   >M</text>
 </svg>
