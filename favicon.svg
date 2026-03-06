@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="MK logo">
+  <!-- Reversed "k" (flipped horizontally) -->
+  <text
+    x="-14"
+    y="28"
+    fill="#ff1a1a"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="23"
+    font-weight="700"
+    transform="scale(-1,1)"
+  >K</text>
+
+  <!-- Normal "M" to the right -->
+  <text
+    x="13"
+    y="23"
+    fill="#ff1a1a"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="23"
+    font-weight="700"
+  >M</text>
+</svg>
