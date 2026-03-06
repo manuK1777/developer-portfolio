@@ -167,8 +167,12 @@
   text-shadow: 0 0 10px rgba(96, 165, 250, 0.85);
 }
 
+.go-to-case-study {
+  margin-top: 3rem;
+}
+
 .project-slideshow {
-  margin: 3rem 0;
+  margin: 4rem 0;
   position: relative;
 }
 
