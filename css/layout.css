@@ -298,6 +298,17 @@ html[lang="es"] .lang-link[data-lang="es"] {
   }
 }
 
+@media (max-width: 535px) {
+  /* .footer-inner {
+    align-items: flex-start;
+  } */
+
+  .footer-links {
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
 @media (max-width: 480px) {
   .section {
     padding: 3rem 0;
