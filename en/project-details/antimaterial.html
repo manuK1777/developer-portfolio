@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Antimaterial - Web Dev Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="../index.html" class="logo">
+          <img src="/assets/images/logo-red.png" alt="Logo" />
+        </a>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="../index.html">Home / About</a></li>
+            <li><a href="../projects.html" class="active">Projects</a></li>
+            <li><a href="../case-studies.html">Case Studies</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li class="lang-toggle" title="Change language">
+              <span class="lang-icon" aria-hidden="true">🌐</span>
+              <button
+                type="button"
+                class="lang-link"
+                data-lang="en"
+                aria-label="Switch to English"
+              >EN</button>
+              |
+              <button
+                type="button"
+                class="lang-link"
+                data-lang="es"
+                aria-label="Switch to Spanish"
+              >ES</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <section class="section">
+        <div class="container">
+          <header class="section-header">
+            <h1>Antimaterial</h1>
+          </header>
+
+          <div class="project-detail">
+            <p class="meta">
+              Role: Frontend Developer &amp; Visual Designer<br />
+              Project: Independent client project
+            </p>
+
+            <p>
+              Designed and developed <strong>Antimaterial</strong>, a multilingual brochure
+              website for a Finnish therapist and wellness practitioner. Responsible for the
+              full visual design and frontend implementation from scratch — from layout and
+              typography to a custom client-side internationalisation system supporting
+              Finnish, English and Swedish.
+            </p>
+
+            <p>
+              View the project:
+              <a class="project-link" href="https://antimaterial.fi" target="_blank" rel="noopener noreferrer">Live website</a>
+            </p>
+
+            <h1 class="subheader">Core Responsibilities &amp; Contributions</h1>
+
+            <h2>Visual Design</h2>
+            <ul>
+              <li>
+                Designed the full visual identity of the site — colour palette,
+                typography, layout and component style — from scratch
+              </li>
+              <li>
+                Created a calm, trustworthy aesthetic aligned with the therapeutic
+                nature of the client's practice
+              </li>
+              <li>
+                Built a responsive layout that works across desktop and mobile
+                without relying on a CSS framework
+              </li>
+            </ul>
+
+            <h2>Multilingual System (i18n)</h2>
+            <ul>
+              <li>
+                Built a lightweight client-side internationalisation system in
+                vanilla JavaScript supporting Finnish, English and Swedish
+              </li>
+              <li>
+                Language switching updates a <code>data-active-lang</code>
+                attribute on the <code>body</code> element, triggering CSS
+                selectors that show or hide content tagged with matching
+                <code>data-lang</code> attributes — instant switching with no
+                page reload
+              </li>
+              <li>
+                User language preference persisted via <code>localStorage</code>
+                across sessions and page loads
+              </li>
+              <li>
+                Avoided external i18n libraries entirely — zero dependencies,
+                minimal footprint
+              </li>
+            </ul>
+
+            <h2>SEO &amp; Metadata</h2>
+            <ul>
+              <li>
+                Implemented full SEO metadata: Open Graph tags, Twitter Card,
+                canonical URL, meta description and robots directives
+              </li>
+              <li>
+                Structured multilingual content for discoverability across all
+                three target languages
+              </li>
+            </ul>
+
+            <h2>Deployment</h2>
+            <ul>
+              <li>
+                Deployed on Cloudflare Pages with environment-based configuration
+                and custom domain setup
+              </li>
+            </ul>
+
+            <div class="project-slideshow" data-slideshow>
+              <h2 class="slideshow-header">Project Gallery</h2>
+              <button
+                class="slide-nav prev"
+                type="button"
+                aria-label="Previous image"
+              >
+                ‹
+              </button>
+
+              <div class="slides" data-slides>
+                <!-- Slides will be added here once images are available -->
+              </div>
+
+              <button
+                class="slide-nav next"
+                type="button"
+                aria-label="Next image"
+              >
+                ›
+              </button>
+              <div class="slide-dots" data-dots></div>
+            </div>
+
+            <div class="project-nav">
+              <p class="to-previous-project">
+                <a class="project-link" href="positive-duty.html">&lArr; Previous project</a>
+              </p>
+              <p class="back-to-projects">
+                <a class="project-link" href="../projects.html">Back to projects list</a>
+              </p>
+              <p class="to-next-project">
+                <a class="project-link" href="extended-bandoneon.html">Next project &rArr;</a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          &copy; <span id="year"></span> Manuel Krapovickas. All rights
+          reserved.
+        </p>
+        <ul class="footer-links">
+          <li>
+            <a href="https://github.com/manuK1777" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/manuel-krapovickas/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/animations.js" defer></script>
+    <script src="/js/slideshow.js"></script>
+    <script src="/js/projects.js"></script>
+  </body>
+</html>
