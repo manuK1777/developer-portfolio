@@ -152,7 +152,7 @@ html[lang="es"] .lang-link[data-lang="es"] {
   width: 160px;
   height: 160px;
   border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.6);
+  /*border: 1px solid rgba(148, 163, 184, 0.6);*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,12 +165,12 @@ html[lang="es"] .lang-link[data-lang="es"] {
 }
 
 .hero-avatar img {
-  transform: translateY(26px);
-  /* width: 100%;
+  /*transform: translateY(26px);*/
+   width: 100%;
   height: 100%;
   border-radius: 999px;
   object-fit: cover;
-  display: block; */
+  display: block; 
 }
 
 /* Grid helpers */
