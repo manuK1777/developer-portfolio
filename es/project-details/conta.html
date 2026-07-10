@@ -67,15 +67,17 @@
           <div class="project-detail">
             <p class="meta">
               Rol: desarrollador backend e ingeniero de herramientas<br />
-              Proyecto: herramienta de contabilidad por línea de comandos para autónomos en España
+              Proyecto: herramienta de contabilidad con CLI y TUI interactiva para autónomos en España
             </p>
 
             <p>
-              Desarrollé <strong>Conta</strong>, una herramienta de línea de comandos en Python que ayuda a
+              Desarrollé <strong>Conta</strong>, una herramienta de escritorio en Python que ayuda a
               profesionales autónomos a llevar el control de facturas emitidas, gastos deducibles, pagos de
               seguridad social y obligaciones fiscales trimestrales en España. La aplicación combina un modelo de
               dominio tipado, persistencia basada en SQLite y comandos orientados a tareas para ofrecer un flujo
-              de trabajo rápido en la contabilidad del día a día.
+              de trabajo rápido en la contabilidad del día a día, junto con una <strong>interfaz de terminal
+              interactiva (TUI)</strong> construida con Textual para quienes prefieren un panel visual a
+              comandos sueltos.
             </p>
 
             <p>
@@ -130,6 +132,32 @@
               </li>
             </ul>
 
+            <h2>Interfaz de terminal interactiva (TUI) con Textual</h2>
+            <ul>
+              <li>
+                Diseño y desarrollo de una TUI completa con <code>textual</code>, organizada en
+                6 pantallas navegables mediante teclas de función (F1&ndash;F6): dashboard,
+                facturas, gastos, alta de factura, alta de gasto y Modelo 130.
+              </li>
+              <li>
+                Dashboard con tarjetas de resumen fiscal por trimestre (IVA devengado/deducible,
+                snapshot acumulado de IRPF, cuotas de autónomos), con selector de año y
+                recarga bajo demanda.
+              </li>
+              <li>
+                Tablas de facturas y gastos con filtros por año, trimestre y cliente, y edición
+                de estado de cobro/IVA en línea directamente sobre la fila seleccionada.
+              </li>
+              <li>
+                Formularios de alta para facturas, gastos y pagos fraccionados del Modelo 130,
+                reutilizando la misma capa de servicios que la CLI.
+              </li>
+              <li>
+                Recarga reactiva de datos al cambiar de pestaña, evitando mostrar información
+                obsoleta al volver a una pantalla tras registrar movimientos en otra.
+              </li>
+            </ul>
+
             <h2>Lógica fiscal y de reportes para autónomos en España</h2>
             <ul>
               <li>
@@ -164,6 +192,12 @@
                 Gestión de una base de datos SQLite ligera, inicializada mediante
                 un único comando <code>conta init</code>.
               </li>
+              <li>
+                Uso de aritmética <code>Decimal</code> en todos los importes
+                monetarios, con redondeo consistente (<code>ROUND_HALF_UP</code> a 2
+                decimales) en los puntos de cálculo y visualización, evitando errores
+                de precisión propios del punto flotante en cifras fiscales.
+              </li>
             </ul>
 
             <h2>Exportaciones, copias de seguridad y extensibilidad</h2>
@@ -178,9 +212,16 @@
                 marca temporal de la base de datos SQLite para archivado seguro.
               </li>
               <li>
-                Implementación de hooks de importación de PDFs de facturas,
-                sentando las bases para automatizar la entrada de datos desde
-                documentos escaneados.
+                Implementación de un importador de facturas en PDF (extracción de
+                texto, detección de campos y clasificación fiscal heurística por
+                actividad e IVA/IRPF), con modo <code>--dry-run</code> para
+                verificar antes de dar por buena la importación.
+              </li>
+              <li>
+                Generación de un informe fiscal anual en PDF (con WeasyPrint)
+                que reúne facturas, gastos, cuotas y los resultados de los
+                Modelos 130/303 en un único documento listo para archivar o
+                compartir con la gestoría.
               </li>
               <li>
                 Estructuración del proyecto con dependencias de FastAPI y

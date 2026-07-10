@@ -235,6 +235,7 @@
               <li>Encoding Spanish tax rules (quarters, IVA devengado/deducible, IRPF base and retentions) in code.</li>
               <li>Designing a CLI workflow that was fast to use but still guided and safe for everyday bookkeeping.</li>
               <li>Generating exports and backups that could be shared with an accountant or used for audits.</li>
+              <li>Providing a way to review and correct data (e.g. marking an invoice as paid) without having to recall command flags for one-off tasks.</li>
             </ul>
           </section>
           <section>
@@ -262,6 +263,12 @@
                 Added CSV exports for VAT books and a <code>backup-db</code> command so the SQLite database
                 can be safely archived or handed off to an accountant.
               </li>
+              <li>
+                Built an <strong>interactive TUI with Textual</strong> on top of the same service layer as the CLI:
+                a dashboard with the per-quarter tax summary, invoice and expense tables with filters and inline
+                status editing, and entry forms for invoices, expenses, and Modelo 130, navigable with function
+                keys (F1&ndash;F6).
+              </li>
             </ul>
           </section>
           <section>
@@ -272,6 +279,12 @@
               and IRPF snapshots can be generated on demand. This reduces manual calculation errors,
               shortens the time I spend preparing tax forms, and gives me a clearer view of my financial
               position throughout the year.
+            </p>
+            <p>
+              The TUI added a second layer to everyday use: to check the quarter's status or fix an invoice's
+              collection status, I no longer need to recall commands or flags — I can move between screens with
+              function keys and edit directly on the table. The CLI is still the preferred path for repetitive,
+              scriptable tasks (batch entry, exports), while the TUI covers quick review and one-off corrections.
             </p>
             <p>
               <a class="project-link" href="project-details/conta.html">Go to project page</a>

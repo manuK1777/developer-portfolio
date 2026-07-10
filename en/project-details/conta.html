@@ -59,16 +59,18 @@
           <div class="project-detail">
             <p class="meta">
               Role: Backend Developer &amp; Tooling Engineer<br />
-              Project: Independent CLI accounting tool for freelancers (Spain)
+              Project: CLI + interactive TUI accounting tool for freelancers (Spain)
             </p>
 
             <p>
-              Built <strong>Conta</strong>, a Python-based command-line tool that helps
+              Built <strong>Conta</strong>, a Python-based desktop tool that helps
               self-employed professionals keep track of invoices, deductible
               expenses, social security payments, and quarterly tax obligations
               in Spain. The application combines a typed domain model,
               SQLite-backed persistence, and task-focused commands to provide a
-              fast workflow for everyday bookkeeping.
+              fast workflow for everyday bookkeeping, along with an
+              <strong>interactive terminal UI (TUI)</strong> built with Textual
+              for anyone who prefers a visual panel over loose commands.
             </p>
 
             <p>
@@ -121,6 +123,34 @@
               </li>
             </ul>
 
+            <h2>Interactive Terminal UI (TUI) with Textual</h2>
+            <ul>
+              <li>
+                Designed and built a full TUI with <code>textual</code>,
+                organized into 6 screens navigable via function keys
+                (F1&ndash;F6): dashboard, invoices, expenses, new invoice, new
+                expense, and Modelo 130
+              </li>
+              <li>
+                Dashboard with per-quarter tax summary cards (VAT owed/deductible,
+                accumulated IRPF snapshot, self-employment contributions), with a
+                year selector and on-demand refresh
+              </li>
+              <li>
+                Invoice and expense tables with filters by year, quarter, and
+                client, plus inline editing of collection/VAT status directly on
+                the selected row
+              </li>
+              <li>
+                Entry forms for invoices, expenses, and Modelo 130 fractioned
+                payments, reusing the same service layer as the CLI
+              </li>
+              <li>
+                Reactive data reload on tab switch, avoiding stale data when
+                returning to a screen after registering entries elsewhere
+              </li>
+            </ul>
+
             <h2>Tax &amp; Reporting Logic for Spanish Freelancers</h2>
             <ul>
               <li>
@@ -154,6 +184,12 @@
                 Managed a lightweight SQLite database file, initialized via a
                 single <code>conta init</code> command
               </li>
+              <li>
+                Used <code>Decimal</code> arithmetic for all monetary amounts,
+                with consistent rounding (<code>ROUND_HALF_UP</code> to 2
+                decimal places) at calculation and display boundaries, avoiding
+                floating-point precision errors in tax figures
+              </li>
             </ul>
 
             <h2>Exports, Backups &amp; Extensibility</h2>
@@ -168,8 +204,16 @@
                 copies of the SQLite database for safe archiving
               </li>
               <li>
-                Implemented PDF import hooks for invoices, laying the groundwork
-                for automating data entry from scanned documents
+                Implemented a PDF invoice importer (text extraction, field
+                detection, and heuristic tax classification by activity and
+                VAT/IRPF), with a <code>--dry-run</code> mode to verify results
+                before committing an import
+              </li>
+              <li>
+                Generated an annual tax report in PDF (via WeasyPrint) that
+                pulls together invoices, expenses, contributions, and Modelo
+                130/303 results into a single document ready to archive or
+                share with an accountant
               </li>
               <li>
                 Structured the project with FastAPI and Uvicorn dependencies to

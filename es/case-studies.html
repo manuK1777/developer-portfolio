@@ -232,6 +232,7 @@
               <li>Codificar en software las reglas fiscales españolas (trimestres, IVA devengado/deducible, base y retenciones de IRPF).</li>
               <li>Diseñar un flujo de trabajo en CLI que fuera rápido de usar pero a la vez guiado y seguro para la contabilidad diaria.</li>
               <li>Generar exportaciones y copias de seguridad que pudieran compartirse con una gestoría o utilizarse en auditorías.</li>
+              <li>Ofrecer una forma de revisar y corregir datos (por ejemplo, marcar una factura como cobrada) sin tener que recordar flags de comandos para tareas puntuales.</li>
             </ul>
           </section>
           <section>
@@ -257,6 +258,11 @@
                 Añadidos exportes CSV para los libros de IVA y un comando <code>backup-db</code> para poder archivar con seguridad
                 la base de datos SQLite o entregarla a una gestoría.
               </li>
+              <li>
+                Construcción de una <strong>TUI interactiva con Textual</strong> sobre la misma capa de servicios que la CLI:
+                un dashboard con el resumen fiscal por trimestre, tablas de facturas y gastos con filtros y edición de estado
+                en línea, y formularios de alta para facturas, gastos y el Modelo 130, navegables con teclas de función (F1&ndash;F6).
+              </li>
             </ul>
           </section>
           <section>
@@ -266,6 +272,12 @@
               Registrar facturas y gastos ahora se reduce a ejecutar unos pocos comandos, y los snapshots trimestrales de IVA e IRPF
               pueden generarse bajo demanda. Esto reduce errores de cálculo manual, acorta el tiempo que dedico a preparar modelos
               fiscales y me ofrece una visión más clara de mi situación financiera a lo largo del año.
+            </p>
+            <p>
+              La TUI añadió una segunda capa de uso diario: para revisar el estado del trimestre o corregir el estado de cobro
+              de una factura ya no necesito recordar comandos ni flags, puedo moverme por pantallas con las teclas de función
+              y editar directamente sobre la tabla. La CLI sigue siendo la vía preferida para tareas repetitivas y scripteables
+              (alta en lote, exportaciones), mientras que la TUI cubre la revisión rápida y las correcciones puntuales.
             </p>
             <p>
               <a class="project-link" href="project-details/conta.html">Ir a página del proyecto</a>
